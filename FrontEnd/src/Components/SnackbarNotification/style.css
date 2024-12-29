@@ -1,0 +1,12 @@
+.Toastify__toast--dark {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+.Toastify__toast-icon {
+    color: #fff !important;
+}
+
+.Toastify__close-button {
+    color: #fff !important;
+}

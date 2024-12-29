@@ -1,0 +1,151 @@
+@keyframes bg-text-mov {
+    50% {
+        letter-spacing: 2px;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes text-animation {
+    50% {
+        letter-spacing: 10px;
+    }
+}
+
+@keyframes float-bg {
+    0% {
+        width: calc(100% - 24%);
+    }
+
+    50% {
+        width: calc(100% - 8%);
+    }
+
+    100% {
+        width: calc(100% - 24%);
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+        top: 30px;
+    }
+
+    50% {
+        top: -30px;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+@keyframes autoplay {
+    0% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes autoplay2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+        border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(0.8);
+        border-color: rgba(19, 18, 18, 0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+        border-color: rgba(19, 18, 18, 0.7);
+    }
+}
+
+@keyframes scaleDot {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes borderanim {
+    0% {
+        background-size: 100% 10px;
+    }
+
+    50% {
+        background-size: 100% 25px;
+    }
+
+    100% {
+        background-size: 100% 10px;
+    }
+}
+
+@-webkit-keyframes borderanim {
+    0% {
+        background-size: 100% 10px;
+    }
+
+    50% {
+        background-size: 100% 25px;
+    }
+
+    100% {
+        background-size: 100% 10px;
+    }
+}
+
+@keyframes borderanimSVG {
+    0% {
+        background-size: 100% 8px;
+    }
+
+    50% {
+        background-size: 100% 14px;
+    }
+
+    100% {
+        background-size: 100% 8px;
+    }
+}

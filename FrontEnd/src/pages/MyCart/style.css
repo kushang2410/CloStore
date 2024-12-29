@@ -1,0 +1,14 @@
+.wdt-button-3 {
+    color: #E8E9E5;
+    background-color: #000000;
+    font-size: 12px;
+    border: 0;
+}
+
+.total {
+    padding: 30px 15px !important;
+}
+.cart-align{
+    position: relative;
+    top: 50px;
+}

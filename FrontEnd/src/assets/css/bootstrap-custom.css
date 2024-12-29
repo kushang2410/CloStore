@@ -1,0 +1,251 @@
+.card {
+    width: 35%;
+}
+
+.col-49 {
+    width: 49%;
+}
+
+.top-25 {
+    top: 25%;
+}
+
+.top-33 {
+    top: 33%;
+}
+
+.top-45 {
+    top: 45%;
+}
+
+.top-65 {
+    top: 65%;
+}
+
+.top-90 {
+    top: 110px;
+}
+
+.start-38 {
+    left: 38%;
+}
+
+.start-45 {
+    left: 45%;
+}
+
+.start-25 {
+    left: 100px;
+}
+
+.mt-10 {
+    margin-top: 150px;
+}
+
+.my-30 {
+    margin: 300px 0;
+}
+
+.ms-8 {
+    margin-left: 8rem !important;
+}
+
+.ms-10 {
+    margin-left: 550px;
+}
+
+.mb-10 {
+    margin-bottom: 150px;
+}
+
+.mb-8 {
+    margin-bottom: 80px;
+}
+
+.mt-6 {
+    margin-top: 60px;
+}
+
+.mt-8 {
+    margin-top: 80px;
+}
+
+.mt-9 {
+    margin-top: 100px;
+}
+
+.fw-boldest {
+    font-weight: 800;
+}
+
+.btn-custom {
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.lh-xl {
+    line-height: 2.4;
+}
+
+.lh-xxl {
+    line-height: 3.4;
+}
+
+.fs-15 {
+    font-size: 14px;
+}
+
+.ms-2-5 {
+    margin-left: 10px;
+}
+
+.mt-2-5 {
+    margin-left: 10px;
+}
+
+.fs-60 {
+    font-size: 60px;
+}
+
+.navbar-nav {
+    /* padding: 0 65px; */
+    gap: 22px;
+}
+
+.h-56 {
+    height: 560px;
+}
+
+.container-fluid {
+    width: 90%;
+}
+
+.my-8 {
+    margin: 110px 0;
+}
+
+.my-10 {
+    margin: 150px 0;
+}
+
+.text-red {
+    color: #c32929 !important;
+}
+
+.pt-6 {
+    padding-top: 60px;
+}
+
+.p-6 {
+    padding: 60px;
+}
+
+.dropdown-item:active {
+    background-color: transparent !important;
+}
+
+.nav-item .nav-link:hover {
+    color: #896d60 !important;
+}
+
+.table {
+    border-color: transparent !important;
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    color: #000 !important;
+    font-weight: 500;
+}
+
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: none !important;
+    --bs-accordion-border-color: none !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    display: none;
+}
+
+.accordion-collapse {
+    transition: height 0.3s ease-in-out;
+}
+
+.accordion-button:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.accordion-button__icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-button[aria-expanded="true"] .accordion-button__icon {
+    transform: rotate(180deg);
+}
+
+.input-group>.form-control,
+.input-group>.form-floating,
+.input-group>.form-select {
+    position: relative;
+    flex: 1 1 auto;
+    width: 0px !important;
+    min-width: 0;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 0;
+}
+
+.w-18 {
+    width: 18% !important;
+}
+
+.w-54 {
+    width: 54% !important;
+}
+
+.w-65 {
+    width: 65% !important;
+}
+
+.w-85 {
+    width: 85% !important;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+.py-7 {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    border-color: transparent;
+    border-bottom: 2px solid;
+}
+
+:focus-visible {
+    outline: transparent !important;
+}
+
+.navbar-light .navbar-toggler {
+    color: transparent !important;
+}
+
+.btn-close {
+    --bs-btn-close-focus-shadow: transparent !important;
+}

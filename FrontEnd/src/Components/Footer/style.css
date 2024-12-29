@@ -1,0 +1,21 @@
+footer {
+    background-color: #e4e4e4;
+    padding: 40px;
+}
+
+/* .footer-middle {
+    position: relative;
+    height: 460px;
+    width: 78%;
+    left: 215px;
+} */
+
+.footer-store-info {
+    position: relative;
+    left: -20px;
+    top: -10px;
+}
+
+.social-link {
+    gap: 20px;
+}

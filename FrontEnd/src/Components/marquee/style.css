@@ -1,0 +1,14 @@
+.marquee-container {
+    background-color: black !important;
+    color: white;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.marquee-text span {
+    margin-right: 1000px;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}

@@ -1,0 +1,351 @@
+.fashion-title {
+    width: 1800px;
+    font-size: 190px;
+    letter-spacing: 38px;
+    color: black;
+}
+
+.fashion-title-1 {
+    width: 1800px;
+    font-size: 190px;
+    letter-spacing: 22px;
+    color: black;
+}
+
+.fashion-title-2 {
+    width: 1800px;
+    font-size: 190px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.friendly-title {
+    font-size: 190px;
+    letter-spacing: 38px;
+    color: black;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: lightgray;
+    -webkit-animation: bg-text-mov 4s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+    animation: bg-text-mov 4s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+    display: inline-block;
+    line-height: 1;
+    opacity: .4;
+    -webkit-text-stroke-width: 2px;
+}
+
+.wdt-button {
+    color: #565E41;
+    background-color: #E8E9E5;
+    font-size: 12px;
+    padding: 14px 46px
+}
+
+.wdt-button-2 {
+    color: #E8E9E5;
+    background-color: #000000;
+    font-size: 12px;
+    padding: 14px 46px
+}
+
+.about-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 580px;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.about-btn-link {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    border: 0;
+    font-weight: 400;
+    text-decoration: none;
+    color: #222;
+    background-color: transparent;
+}
+
+.about-btn-link:hover:after {
+    width: 4.125rem;
+}
+
+.about-btn-link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50px;
+    max-width: 100%;
+    height: 2px;
+    transition: width .28s cubic-bezier(.47, 0, .745, .715);
+    background-color: currentColor;
+}
+
+.about-img-2 {
+    position: relative;
+    height: 260px;
+    width: 656px;
+    background-size: 100% 100%;
+}
+
+.about-img-3 {
+    position: relative;
+    height: 300px;
+    width: 320px;
+    background-size: 100% 100%;
+}
+
+.about-img-4 {
+    position: relative;
+    left: 6px;
+    height: 300px;
+    width: 320px;
+    background-size: 100% 100%;
+    background-color: #f5e6e0;
+}
+
+.kown-animation {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 100px 0px 0px 0px;
+    position: relative;
+}
+
+.know-alignment {
+    width: 730px;
+    margin-left: 90px;
+}
+
+.kown-animation::before {
+    content: '';
+    background-color: #e2e2e2;
+    position: absolute;
+    width: calc(100% - 24%);
+    height: 100%;
+    opacity: 0.5;
+    bottom: 0;
+    right: 0;
+    animation: float-bg 5s ease-in-out infinite;
+}
+
+.know-img-2 img {
+    width: 400px;
+    max-width: 400px;
+    animation: moveUpDown 3s ease-in-out infinite;
+    position: relative;
+}
+
+.know-img-2 {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+}
+
+.know-title {
+    font-family: "Kaushan Script", Sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.know-contant {
+    font-family: "lato", Sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.deal-background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 580px;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.deal-timer {
+    position: relative;
+    height: 580px;
+    width: 90%;
+    left: 100px;
+}
+
+.text_dash {
+    position: relative;
+    padding-left: 3.25rem;
+}
+
+.text_dash:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2.5rem;
+    height: 2px;
+    margin-top: -1px;
+    background-color: currentColor;
+    color: inherit;
+}
+
+.deal-title {
+    font-size: 4.375rem !important;
+}
+
+.deal-timer .countdown-unit,
+.sec {
+    min-width: 6.25rem;
+    font-size: 1.875rem;
+    padding-right: 2.75rem;
+    position: relative;
+}
+
+.deal-timer .countdown-unit:after {
+    content: ":";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 1.375rem;
+}
+
+.countdown-word {
+    color: #999b93;
+}
+
+.stylish-products {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    left: 100px;
+}
+
+.product-card:hover .product-atc,
+.product-img-wrapper:hover .product-atc {
+    opacity: 1;
+}
+
+.stylist-title {
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+}
+
+.stylist-img-container {
+    padding: 60px;
+}
+
+.stylist-img-subtitle {
+    font-size: clamp(4.375rem, 3.3654rem + 4.4872vw, 8.75rem);
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.stylist-img-title h5 a {
+    margin-top: 0;
+    font-size: clamp(3.75rem, 2.4519rem + 5.7692vw, 9.375rem);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    line-height: 1;
+}
+
+.stylist-img-title {
+    max-width: 346px;
+}
+
+.stylist-img-subtitle-2 {
+    font-size: clamp(3.125rem, 2.9808rem + 0.641vw, 3.75rem);
+    font-weight: 800;
+    font-family: "Kaushan Script", Sans-serif;
+    line-height: 1;
+}
+
+
+.stylist-img-title-2 {
+    max-width: 346px;
+    margin-top: 0;
+    font-size: clamp(3.75rem, 2.4519rem + 5.7692vw, 9.375rem);
+    color: black;
+    line-height: 1;
+}
+
+.stylist-img-description {
+    font-size: clamp(1.75rem, 1.6346rem + 0.5128vw, 2.25rem);
+    font-weight: 700;
+    color: #565e41;
+}
+.stylist-img-description-2 {
+    font-size: clamp(1.75rem, 1.6346rem + 0.5128vw, 2.25rem);
+    font-weight: 700;
+    color: #565e41;
+}
+
+.stylist-img-subtitle-3 {
+    font-size: clamp(3.125rem, 2.9808rem + 0.641vw, 3.75rem);
+    font-weight: 900;
+    font-family: "Kaushan Script", Sans-serif;
+    line-height: 1;
+}
+
+.stylist-img-title-3 {
+    margin-top: 0;
+    font-size: clamp(1.25rem, 0.4519rem + 4.7692vw, 9.375rem);
+    color: black;
+    line-height: 1.5;
+}
+
+.social-share {
+    position: relative;
+    height: 560px;
+    width: 90%;
+    left: 100px;
+}
+
+.social-banners {
+    display: flex;
+}
+
+.social-banners img {
+    height: 290px;
+    width: 330px;
+    margin: 5px;
+}
+
+.autoplay1 {
+    animation: autoplay 2s infinite alternate linear;
+    transition: all cubic-bezier(.47, 1.21, .47, 1.21) .3s;
+}
+
+.autoplay2 {
+    animation: autoplay2 2s infinite alternate linear;
+    transition: all cubic-bezier(.47, 1.21, .47, 1.21) .3s;
+}
+
+.insta-title {
+    font-size: 190px;
+    letter-spacing: 38px;
+    color: black;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: lightgray;
+    -webkit-animation: bg-text-mov 4s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+    animation: bg-text-mov 4s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+    display: inline-block;
+    line-height: 1;
+    opacity: .4;
+    -webkit-text-stroke-width: 2px;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+    top: 450px;
+}

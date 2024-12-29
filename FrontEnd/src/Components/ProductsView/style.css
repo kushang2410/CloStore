@@ -1,0 +1,8 @@
+.wdt-button-pagination {
+    background-color: #896d60;
+}
+.wdt-button-action {
+    background-color: rgb(137 109 96 / 40%);
+    border: 2px solid #896d60 !important;
+    color: #534d4a !important;
+}

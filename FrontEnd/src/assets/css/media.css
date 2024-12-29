@@ -1,0 +1,672 @@
+@media (min-width: 320px) {
+    .branded-apparels {
+        left: 16px;
+    }
+
+    .designers-team {
+        left: 16px;
+    }
+
+    .d-xsm-none {
+        display: none;
+    }
+
+    .d-xsm-block {
+        display: block;
+    }
+
+    .col-49 {
+        width: 100% !important;
+    }
+
+    .start-21 {
+        left: 23px;
+    }
+
+    .shop-banner {
+        left: 10px;
+    }
+
+    .shop-banner-title {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+
+    .mt-21 {
+        margin-top: 210px;
+    }
+
+    .about-background-img {
+        left: 8px;
+        width: 96%;
+    }
+
+    .about-img-2 {
+        top: 30px;
+        left: -2px;
+        height: 205px;
+        width: 100%;
+    }
+
+    .about-img-3 {
+        top: 24px;
+        height: 300px;
+        width: 100%;
+    }
+
+    .about-img-4 {
+        left: 0;
+        top: 24px;
+        height: 300px;
+        width: 100%;
+    }
+
+    .embla-main {
+        overflow: hidden;
+        height: 680px;
+    }
+
+    .embla__dots {
+        left: 23%;
+    }
+
+    .know-img-2 img {
+        width: 190px;
+    }
+
+    .know-img-2 {
+        right: -13px;
+    }
+
+    .deal-timer {
+        left: 18px;
+    }
+
+    .deal-title {
+        font-size: 2.175rem !important;
+    }
+
+    .deal-timer .countdown-unit,
+    .sec {
+        min-width: 5.25rem;
+    }
+}
+
+@media (min-width: 375px) {
+    .branded-apparels {
+        left: 18px;
+    }
+
+    .designers-team {
+        left: 18px;
+    }
+
+    .d-xsm-none {
+        display: none;
+    }
+
+    .d-xsm-block {
+        display: block;
+    }
+
+    .embla__dots {
+        left: 28%;
+    }
+
+    .about-img-2 {
+        top: 30px;
+        left: -2px;
+        height: 205px;
+    }
+
+    .stylish-products {
+        left: 10px;
+        width: 94%;
+    }
+
+    .stylist-img-container {
+        left: -38px;
+        top: -34px;
+    }
+
+    .banner-stylist-3 {
+        padding: 10px;
+    }
+
+    .stylist-img-description-2 {
+        height: 50px;
+    }
+
+    .trendy-products {
+        left: 18px;
+    }
+
+    .tabs {
+        margin-left: 40px;
+    }
+
+    .tabs>button {
+        padding: 0 18px !important;
+    }
+
+    .social-share {
+        left: 14px;
+    }
+}
+
+@media (min-width: 425px) {
+    .shop-banner-title {
+        font-size: calc(1.575rem + 1.5vw);
+    }
+
+    .fashion-title-mobile {
+        font-size: 60px;
+        top: 85px;
+    }
+
+    .friendly-title-mobile {
+        top: 150px;
+        font-size: 55px;
+    }
+
+    .embla__dots {
+        left: 30%;
+    }
+
+    .deal-timer .countdown-unit,
+    .sec {
+        min-width: 6.25rem;
+    }
+
+    .deal-timer {
+        left: 12px;
+    }
+
+    .deal-background-img {
+        width: 103%;
+    }
+
+    .stylist-img-container {
+        padding: 66px;
+    }
+
+    .stylist-img-button-text {
+        margin-left: -18px;
+    }
+
+    .trendy-products {
+        left: 20px;
+    }
+
+    .tabs {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 576px) {
+    .branded-apparels {
+        left: 28px;
+    }
+
+    .designers-team {
+        left: 28px;
+    }
+
+    .custom-offcanvas {
+        right: 60px !important;
+    }
+
+    .shop-banner {
+        left: 18px;
+    }
+
+    .shop-banner-title {
+        font-size: calc(2.175rem + 1.5vw);
+    }
+
+    .embla__dots {
+        left: 35%;
+    }
+
+    .about-img-2 {
+        height: 290px;
+    }
+
+    .about-img-3 {
+        height: 275px;
+    }
+
+    .about-img-4 {
+        left: -10px;
+        height: 274px;
+        width: 104%;
+    }
+
+    .know-img-2 img {
+        width: 280px;
+    }
+
+    .know-img-2 {
+        right: -20px;
+    }
+
+    .deal-timer {
+        left: 20px;
+    }
+
+    .stylist-img-container {
+        padding: 128px;
+    }
+
+    .stylist-img-container {
+        left: -82px;
+        top: -88px;
+    }
+
+    .stylist-img-description-2 {
+        height: 70px;
+    }
+
+    .trendy-products {
+        left: 26px;
+    }
+
+    .tabs {
+        margin-left: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .shop-banner-title {
+        font-size: calc(3.075rem + 1.5vw);
+    }
+
+    .branded-apparels {
+        left: 36px;
+    }
+
+    .designers-team {
+        left: 36px;
+    }
+
+    .embla__dots {
+        left: 38.5%;
+    }
+
+    .fashion-title-mobile {
+        font-size: 88px;
+        top: 60px;
+    }
+
+    .friendly-title-mobile {
+        top: 145px;
+        font-size: 70px;
+    }
+
+    .about-img-3 {
+        height: 305px;
+    }
+
+    .about-img-4 {
+        height: 306px;
+        width: 103%;
+    }
+
+    .know-img-2 img {
+        width: 190px;
+    }
+
+    .deal-timer {
+        left: 36px;
+    }
+
+    .stylist-img-subtitle {
+        font-size: 40px;
+    }
+
+    .stylist-img-button-text>button {
+        width: 100%;
+    }
+
+    .stylist-img-subtitle-2 {
+        font-size: 40px;
+    }
+
+    .stylist-img-title-2 {
+        font-size: 40px;
+    }
+
+    .stylist-img-subtitle-3 {
+        font-size: 40px;
+    }
+
+    .stylist-img-title-3 {
+        font-size: 26px;
+    }
+
+    .stylist-img-description-2 {
+        height: 50px;
+    }
+
+    .trendy-products {
+        left: 2px;
+        width: 100%;
+    }
+
+    .social-share {
+        left: 46px;
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu-center {
+        left: -392px !important;
+    }
+
+    .banner-img {
+        width: 205px;
+        height: 205px;
+    }
+
+    .navbar-overlay {
+        top: -89px;
+        left: 0px;
+        width: 205px;
+        height: 205px;
+    }
+
+    .shop-banner {
+        left: 30px;
+    }
+
+    .start-21 {
+        left: 38px;
+    }
+
+    .shop-banner-title {
+        font-size: calc(3.775rem + 1.5vw);
+    }
+
+    .mt-21 {
+        margin-top: 310px;
+    }
+
+    .fashion-title-mobile {
+        font-size: 140px;
+        top: 70px;
+    }
+
+    .friendly-title-mobile {
+        top: 184px;
+        font-size: 110px;
+    }
+
+    .embla__dots {
+        left: 41%;
+    }
+
+    .about-img-2 {
+        top: 0px;
+        height: 250px;
+    }
+
+    .about-img-3 {
+        top: 0;
+        height: 310px;
+    }
+
+    .about-img-4 {
+        top: 0;
+    }
+
+    .know-img-2 img {
+        width: 290px;
+    }
+
+    .know-img-2 {
+        right: -30px;
+    }
+
+    .deal-timer {
+        left: 45px;
+    }
+
+    .deal-title {
+        font-size: 4.175rem !important;
+    }
+
+    .p-custom {
+        padding-top: 10px;
+    }
+
+    .stylist-img-subtitle {
+        font-size: clamp(4.375rem, 3.3654rem + 4.4872vw, 8.75rem);
+    }
+
+    .stylist-img-subtitle-2 {
+        font-size: clamp(3.125rem, 2.9808rem + 0.641vw, 3.75rem);
+    }
+
+    .stylist-img-button-text>button {
+        width: fit-content;
+    }
+
+    .stylist-img-title-2 {
+        font-size: 78px;
+    }
+
+    .stylist-img-description-2 {
+        height: 60px;
+    }
+
+    .stylist-img-title-3 {
+        font-size: clamp(1.25rem, 0.4519rem + 4.7692vw, 9.375rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dropdown-menu-center {
+        left: -405px !important;
+    }
+
+    .col-49 {
+        width: 49% !important;
+    }
+
+    .about-img-2 {
+        top: 0px;
+        height: 250px;
+    }
+
+    .about-img-3 {
+        top: 0;
+        height: 310px;
+    }
+
+    .about-img-4 {
+        top: 0;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .col-xl-8 {
+        flex: 0 0 auto;
+        width: 58.33333333% !important;
+    }
+
+    .col-xl-4 {
+        flex: 0 0 auto;
+        width: 41.66666667% !important;
+    }
+
+    .shop-banner {
+        left: 50px;
+    }
+
+    .shop-banner-title {
+        font-size: calc(4.775rem + 1.5vw);
+    }
+
+    .know-img-2 img {
+        width: 400px;
+    }
+
+    .know-img-2 {
+        right: -40px;
+    }
+
+    .deal-timer {
+        left: 58px;
+    }
+
+    .p-custom {
+        padding-top: 25px;
+    }
+
+    .stylish-products {
+        position: relative;
+        height: 100%;
+        width: 90%;
+        left: 100px;
+    }
+
+    .stylist-img-title-2 {
+        font-size: 96px;
+    }
+
+    .banner-stylist-3 {
+        padding: 38px;
+    }
+
+    .stylist-img-description-2 {
+        height: 70px;
+    }
+
+
+    .trendy-products-img {
+        width: 349px;
+    }
+
+    .social-share {
+        left: 100px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .col-xl-8 {
+        flex: 0 0 auto;
+        width: 66.66666667% !important;
+    }
+
+    .col-xl-4 {
+        flex: 0 0 auto;
+        width: 33.333333% !important;
+    }
+
+    .dropdown-menu-center {
+        left: -614px !important;
+    }
+
+    .banner-img {
+        width: 275px;
+        height: 275px;
+    }
+
+    .navbar-overlay {
+        top: -89px;
+        left: 0px;
+        width: 275px;
+        height: 275px;
+    }
+
+    .shop-banner-title {
+        font-size: calc(5.775rem + 1.5vw);
+    }
+
+    .deal-title {
+        font-size: 5.175rem !important;
+    }
+
+    .p-custom {
+        padding-top: 40px;
+    }
+
+    .stylist-img-title-2 {
+        font-size: clamp(3.75rem, 2.4519rem + 5.7692vw, 9.375rem);
+    }
+
+    .stylist-img-subtitle-3 {
+        font-size: clamp(3.125rem, 2.9808rem + 0.641vw, 3.75rem);
+    }
+
+    .stylist-img-description-2 {
+        height: 90px;
+    }
+
+    .trendy-products {
+        left: 100px;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1620px) {
+    .dropdown-menu-center {
+        left: -702px !important;
+    }
+
+    .start-21 {
+        left: 60px;
+    }
+
+    .shop-banner-title {
+        font-size: calc(6.075rem + 1.5vw);
+    }
+}
+
+@media (min-width: 2560px) {
+    .dropdown-menu-center {
+        left: -1172px !important;
+    }
+
+    .banner-img {
+        width: 375px;
+        height: 375px;
+    }
+
+    .navbar-overlay {
+        top: -89px;
+        left: 0px;
+        width: 375px;
+        height: 375px;
+    }
+
+    .start-21 {
+        left: 170px;
+    }
+
+    .shop-banner-title {
+        font-size: calc(8.775rem + 1.5vw);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .product-col-3 {
+        margin-left: 5px;
+    }
+
+    .product-col-3 .product-main-image {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 1440px) {
+    .social-banners {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scrollbar-width: none;
+    }
+}

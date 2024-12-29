@@ -1,0 +1,56 @@
+.navbar-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.banner-img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.navbar-container:hover .banner-img {
+    transform: scale(1.1);
+}
+
+.dropdown-menu-center {
+    left: -856px !important;
+    right: 0;
+    top: 56px !important;
+    width: 100vw;
+    padding: 20px 40px
+}
+
+.navbar-overlay {
+    position: absolute;
+    top: -123px;
+    left: -11px;
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container:hover .navbar-overlay {
+    opacity: 1;
+}
+
+.plus-btn {
+    font-size: 2rem;
+    color: white;
+    transition: transform 0.4s ease;
+}
+
+.navbar-container:hover .plus-btn {
+    transform: scale(1.5);
+}

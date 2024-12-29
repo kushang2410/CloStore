@@ -1,0 +1,704 @@
+[
+    {
+      "_id": {
+        "$oid": "66f96ea45a442cbb37682431"
+      },
+      "name": "Windcheater Bomber Jacket",
+      "image": "assets\\images\\products\\1727622820247.jpg",
+      "price": 1999,
+      "rating": 5,
+      "__v": 0,
+      "category": "Men",
+      "color": "Green",
+      "size": "L",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f96fb55a442cbb3768243f"
+      },
+      "name": "Kirby T-Shirt",
+      "image": "assets\\images\\products\\1727623093378.jpg",
+      "price": 379,
+      "rating": 3,
+      "__v": 0,
+      "category": "Women",
+      "color": "Gray",
+      "size": "S",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f970435a442cbb37682449"
+      },
+      "name": "Zessi Dresses",
+      "image": "assets\\images\\products\\1727623235617.jpg",
+      "price": 399,
+      "rating": 4.4,
+      "__v": 0,
+      "category": "Women",
+      "color": "white",
+      "size": "XXL",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96fd05a442cbb37682441"
+      },
+      "name": "Solid Hooded Sweatshirt",
+      "image": "assets\\images\\products\\1727623120455.jpg",
+      "price": 749,
+      "rating": 2.7,
+      "__v": 0,
+      "category": "Men",
+      "color": "Black",
+      "size": "XXL",
+      "brand": "Balenciaga"
+    },
+    {
+      "_id": {
+        "$oid": "66f96c855a442cbb3768241d"
+      },
+      "name": "Nike Zoom Freak",
+      "image": "assets\\images\\products\\1727622277198.jpg",
+      "price": 899,
+      "rating": 3,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Black",
+      "size": "L",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f96c9b5a442cbb3768241f"
+      },
+      "name": "Nike Air Pegasus",
+      "image": "assets\\images\\products\\1727622299588.jpg",
+      "price": 799,
+      "rating": 3.5,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Black",
+      "size": "S",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f969155a442cbb376823f7"
+      },
+      "name": "Full Zip Hoodie",
+      "image": "assets\\images\\products\\1727621397945.jpg",
+      "price": 399,
+      "rating": 4.5,
+      "__v": 0,
+      "category": "Men",
+      "color": "Red",
+      "size": "XL",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f9728d5a442cbb37682457"
+      },
+      "name": "Beach Ville Red T-shirt",
+      "image": "assets\\images\\products\\1727623821659.jpg",
+      "price": 599,
+      "rating": 4,
+      "__v": 0,
+      "category": "Women",
+      "color": "Red",
+      "size": "M",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96cb95a442cbb37682421"
+      },
+      "name": "Nike Air Jordans",
+      "image": "assets\\images\\products\\1727622329771.jpg",
+      "price": 1599,
+      "rating": 4,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Sky",
+      "size": "XL",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96fee5a442cbb37682443"
+      },
+      "name": "Girls Hooded Sweatshirt",
+      "image": "assets\\images\\products\\1727623150402.jpg",
+      "price": 599,
+      "rating": 4.6,
+      "__v": 0,
+      "category": "Women",
+      "color": "Gray",
+      "size": "XL",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f9700f5a442cbb37682445"
+      },
+      "name": "Hooded Front Open Sweatshirt",
+      "image": "assets\\images\\products\\1727623183034.jpg",
+      "price": 999,
+      "rating": 4.8,
+      "__v": 0,
+      "category": "Men",
+      "color": "Lighgray",
+      "size": "M",
+      "brand": "Givenchy"
+    },
+    {
+      "_id": {
+        "$oid": "66f970295a442cbb37682447"
+      },
+      "name": "Cotton Jersey T-Shirt",
+      "image": "assets\\images\\products\\1727623209879.jpg",
+      "price": 349,
+      "rating": 3,
+      "__v": 0,
+      "category": "Women",
+      "color": "Black",
+      "size": "S",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f971c55a442cbb37682453"
+      },
+      "name": "Long Sleeve Tee",
+      "image": "assets\\images\\products\\1727623621828.jpg",
+      "price": 749,
+      "rating": 3.7,
+      "__v": 0,
+      "category": "Women",
+      "color": "Black",
+      "size": "S",
+      "brand": "Kenzo"
+    },
+    {
+      "_id": {
+        "$oid": "66f972385a442cbb37682455"
+      },
+      "name": "Pull Classic Cool",
+      "image": "assets\\images\\products\\1727623736477.jpg",
+      "price": 549,
+      "rating": 2.9,
+      "__v": 0,
+      "category": "Men",
+      "color": "Black",
+      "size": "L",
+      "brand": "Balenciaga"
+    },
+    {
+      "_id": {
+        "$oid": "66f9697a5a442cbb376823fb"
+      },
+      "name": "Essentials Hoodie",
+      "image": "assets\\images\\products\\1727621498867.jpg",
+      "price": 699,
+      "rating": 5,
+      "__v": 0,
+      "category": "Men",
+      "color": "Blue",
+      "size": "M",
+      "brand": "Balenciaga"
+    },
+    {
+      "_id": {
+        "$oid": "66f972b65a442cbb37682459"
+      },
+      "name": "Fusion Cap",
+      "image": "assets\\images\\products\\1727623862940.jpg",
+      "price": 299,
+      "rating": 4.6,
+      "__v": 0,
+      "category": "accessories",
+      "color": "Gray",
+      "size": "S",
+      "brand": "Balenciaga"
+    },
+    {
+      "_id": {
+        "$oid": "66f96cf35a442cbb37682423"
+      },
+      "name": "Men Turbo-06 Running Shoes",
+      "image": "assets\\images\\products\\1727622387271.jpg",
+      "price": 599,
+      "rating": 2.5,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Black",
+      "size": "M",
+      "brand": "Kenzo"
+    },
+    {
+      "_id": {
+        "$oid": "66f96d3b5a442cbb37682425"
+      },
+      "name": "Hiking Shoes",
+      "image": "assets\\images\\products\\1727622459599.jpg",
+      "price": 1699,
+      "rating": 5,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Brown",
+      "size": "L",
+      "brand": "Adidas"
+    },
+    {
+      "_id": {
+        "$oid": "66f96d715a442cbb37682427"
+      },
+      "name": "Bacca Bucci Deodar",
+      "image": "assets\\images\\products\\1727622513317.jpg",
+      "price": 1399,
+      "rating": 4,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Lightbrown",
+      "size": "L",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96dac5a442cbb37682429"
+      },
+      "name": "Thermal Cardigan Sweater ",
+      "image": "assets\\images\\products\\1727622572815.jpg",
+      "price": 499,
+      "rating": 4,
+      "__v": 0,
+      "category": "Women",
+      "color": "White",
+      "size": "M",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96dee5a442cbb3768242b"
+      },
+      "name": "SIGHTBOMB Fleece",
+      "image": "assets\\images\\products\\1727622638054.jpg",
+      "price": 599,
+      "rating": 3.2,
+      "__v": 0,
+      "category": "Women",
+      "color": "Gray",
+      "size": "XXL",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f969d75a442cbb37682401"
+      },
+      "name": "Blocked Striped Hoodie",
+      "image": "assets\\images\\products\\1727621591172.jpg",
+      "price": 799,
+      "rating": 2.5,
+      "__v": 0,
+      "category": "Men",
+      "color": "Lightyellow",
+      "size": "L",
+      "brand": "Givenchy"
+    },
+    {
+      "_id": {
+        "$oid": "66f96a015a442cbb37682403"
+      },
+      "name": "Classic Hoodie",
+      "image": "assets\\images\\products\\1727621633413.jpg",
+      "price": 399,
+      "rating": 3,
+      "__v": 0,
+      "category": "Women",
+      "color": "Sky",
+      "size": "L",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96a515a442cbb37682405"
+      },
+      "name": "Flannel Hoodie",
+      "image": "assets\\images\\products\\1727621713286.jpg",
+      "price": 699,
+      "rating": 4,
+      "__v": 0,
+      "category": "Men",
+      "color": "Lightsky",
+      "size": "S",
+      "brand": "Kenzo"
+    },
+    {
+      "_id": {
+        "$oid": "66f96e2e5a442cbb3768242d"
+      },
+      "name": "Colorblock  Blend Beige T-Shirt",
+      "image": "assets\\images\\products\\1727622702091.jpg",
+      "price": 299,
+      "rating": 2.7,
+      "__v": 0,
+      "category": "Men",
+      "color": "Pink",
+      "size": "XXL",
+      "brand": "Kenzo"
+    },
+    {
+      "_id": {
+        "$oid": "66f96e8a5a442cbb3768242f"
+      },
+      "name": "Wilfred Aritzia Cut-Out ",
+      "image": "assets\\images\\products\\1727622794258.jpg",
+      "price": 1199,
+      "rating": 4,
+      "__v": 0,
+      "category": "Women",
+      "color": "Black",
+      "size": "L",
+      "brand": "Balenciaga"
+    },
+    {
+      "_id": {
+        "$oid": "66f96ebb5a442cbb37682433"
+      },
+      "name": "Rapid-Dry Running Jacket",
+      "image": "assets\\images\\products\\1727622843939.jpg",
+      "price": 999,
+      "rating": 4,
+      "__v": 0,
+      "category": "Men",
+      "color": "Yellow",
+      "size": "XL",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96ed35a442cbb37682435"
+      },
+      "name": "Empire Girls Top",
+      "image": "assets\\images\\products\\1727622867577.jpg",
+      "price": 1199,
+      "rating": 4.4,
+      "__v": 0,
+      "category": "Women",
+      "color": "White",
+      "size": "XL",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f9695b5a442cbb376823f9"
+      },
+      "name": "Sherpa Hoodie",
+      "image": "assets\\images\\products\\1727621467498.jpg",
+      "price": 599,
+      "rating": 3,
+      "__v": 0,
+      "category": "Women",
+      "color": "Green",
+      "size": "M",
+      "brand": "Adidas"
+    },
+    {
+      "_id": {
+        "$oid": "66f96eeb5a442cbb37682437"
+      },
+      "name": "Hooded Cotton Sweatshirt",
+      "image": "assets\\images\\products\\1727622891065.jpg",
+      "price": 899,
+      "rating": 3.7,
+      "__v": 0,
+      "category": "Men",
+      "color": "Gray",
+      "size": "S",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f96f045a442cbb37682439"
+      },
+      "name": "Floral Printed Midi Dress",
+      "image": "assets\\images\\products\\1727622916390.jpg",
+      "price": 799,
+      "rating": 3,
+      "__v": 0,
+      "category": "Women",
+      "color": "Black",
+      "size": "M",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96f855a442cbb3768243b"
+      },
+      "name": "Pure Cotton Oversized T-shirt",
+      "image": "assets\\images\\products\\1727623045121.jpg",
+      "price": 699,
+      "rating": 4.1,
+      "__v": 0,
+      "category": "Men",
+      "color": "Black",
+      "size": "XL",
+      "brand": "Kenzo"
+    },
+    {
+      "_id": {
+        "$oid": "66f9699c5a442cbb376823fd"
+      },
+      "name": "Elevated Lined Hoodie",
+      "image": "assets\\images\\products\\1727621532718.jpg",
+      "price": 1099,
+      "rating": 3.5,
+      "__v": 0,
+      "category": "Women",
+      "color": "Black",
+      "size": "L",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f96f9f5a442cbb3768243d"
+      },
+      "name": "Lightweight Sports T-shirt",
+      "image": "assets\\images\\products\\1727623071217.jpg",
+      "price": 249,
+      "rating": 4,
+      "__v": 0,
+      "category": "Men",
+      "color": "Blue",
+      "size": "XXL",
+      "brand": "Givenchy"
+    },
+  
+    {
+      "_id": {
+        "$oid": "66f969bc5a442cbb376823ff"
+      },
+      "name": "Slab Hoodie",
+      "image": "assets\\images\\products\\1727621564250.jpg",
+      "price": 1199,
+      "rating": 5,
+      "__v": 0,
+      "category": "Women",
+      "color": "Lightpurple",
+      "size": "L",
+      "brand": "Kenzo"
+    },
+    {
+      "_id": {
+        "$oid": "66f96a835a442cbb37682407"
+      },
+      "name": "Round Classic T-Shirt",
+      "image": "assets\\images\\products\\1727621763306.jpg",
+      "price": 599,
+      "rating": 3.5,
+      "__v": 0,
+      "category": "Women",
+      "color": "Blue",
+      "size": "S",
+      "brand": "Balenciaga"
+    },
+    {
+      "_id": {
+        "$oid": "66f96aac5a442cbb37682409"
+      },
+      "name": "Raglan Baseball T-shirt",
+      "image": "assets\\images\\products\\1727621804536.jpg",
+      "price": 299,
+      "rating": 1,
+      "__v": 0,
+      "category": "Women",
+      "color": "Sky",
+      "size": "XXL",
+      "brand": "Givenchy"
+    },
+    {
+      "_id": {
+        "$oid": "66f96ad45a442cbb3768240b"
+      },
+      "name": "Henley Collar T-Shirt",
+      "image": "assets\\images\\products\\1727621844197.jpg",
+      "price": 999,
+      "rating": 3.7,
+      "__v": 0,
+      "category": "Men",
+      "color": "Darkgreen",
+      "size": "XXL",
+      "brand": "Adidas"
+    },
+    {
+      "_id": {
+        "$oid": "66f96ae75a442cbb3768240d"
+      },
+      "name": "Square Neck T-shirt",
+      "image": "assets\\images\\products\\1727621863860.jpg",
+      "price": 899,
+      "rating": 4,
+      "__v": 0,
+      "category": "Men",
+      "color": "Orange",
+      "size": "XL",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f96b915a442cbb3768240f"
+      },
+      "name": "Vortex Varsity",
+      "image": "assets\\images\\products\\1727622033529.jpg",
+      "price": 399,
+      "rating": 4.3,
+      "__v": 0,
+      "category": "Women",
+      "color": "Purple",
+      "size": "L",
+      "brand": "Puma"
+    },
+    {
+      "_id": {
+        "$oid": "66f96be85a442cbb37682411"
+      },
+      "name": "Nike Air VaporMax ",
+      "image": "assets\\images\\products\\1727622120913.jpg",
+      "price": 1399,
+      "rating": 4.5,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Sky",
+      "size": "XL",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96c005a442cbb37682413"
+      },
+      "name": "Nike ZoomX Vaporfly",
+      "image": "assets\\images\\products\\1727622144303.jpg",
+      "price": 1299,
+      "rating": 3.7,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Black",
+      "size": "XXL",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96c255a442cbb37682415"
+      },
+      "name": "Nike Blazer Mid '77",
+      "image": "assets\\images\\products\\1727622181091.jpg",
+      "price": 1499,
+      "rating": 4,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Yellow",
+      "size": "S",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f96c3c5a442cbb37682417"
+      },
+      "name": "Nike Air Force 1",
+      "image": "assets\\images\\products\\1727622204167.jpg",
+      "price": 1599,
+      "rating": 5,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Yellow",
+      "size": "L",
+      "brand": "Balenciaga"
+    },
+    {
+      "_id": {
+        "$oid": "66f96c555a442cbb37682419"
+      },
+      "name": "Nike Air Max 90",
+      "image": "assets\\images\\products\\1727622229280.jpg",
+      "price": 799,
+      "rating": 2,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Red",
+      "size": "XL",
+      "brand": "Adidas"
+    },
+    {
+      "_id": {
+        "$oid": "66f96c6f5a442cbb3768241b"
+      },
+      "name": "Nike Glide FlyEase",
+      "image": "assets\\images\\products\\1727622255371.jpg",
+      "price": 999,
+      "rating": 4,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Blue",
+      "size": "S",
+      "brand": "Givenchy"
+    },
+    {
+      "_id": {
+        "$oid": "66f9710e5a442cbb3768244b"
+      },
+      "name": "Bracker Slide Sneakers",
+      "image": "assets\\images\\products\\1727623438079.jpg",
+      "price": 899,
+      "rating": 4,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "White",
+      "size": "L",
+      "brand": "Nike"
+    },
+    {
+      "_id": {
+        "$oid": "66f971215a442cbb3768244d"
+      },
+      "name": "Pinch Weekender Slip Ons",
+      "image": "assets\\images\\products\\1727623457527.jpg",
+      "price": 649,
+      "rating": 3,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Brown",
+      "size": "S",
+      "brand": "Givenchy"
+    },
+    {
+      "_id": {
+        "$oid": "66f971515a442cbb3768244f"
+      },
+      "name": "Platform Slip On Sneakers",
+      "image": "assets\\images\\products\\1727623505617.jpg",
+      "price": 699,
+      "rating": 3.5,
+      "__v": 0,
+      "category": "Shoes",
+      "color": "Pink",
+      "size": "L",
+      "brand": "Adidas"
+    },
+    {
+      "_id": {
+        "$oid": "66f971ad5a442cbb37682451"
+      },
+      "name": "Text Printed T-Shirt",
+      "image": "assets\\images\\products\\1727623597524.jpg",
+      "price": 699,
+      "rating": 3.4,
+      "__v": 0,
+      "category": "Women",
+      "color": "White",
+      "size": "M",
+      "brand": "Nike"
+    }
+  ]
+  

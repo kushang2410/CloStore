@@ -1,0 +1,56 @@
+.header {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 4rem 2rem 2rem 2rem;
+    margin: 0;
+}
+
+.footer__embla {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem 4rem 2rem;
+}
+
+.footer__link {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-low-contrast);
+    font-size: 1.4rem;
+}
+
+.footer__link__svg {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: currentColor;
+}
+
+.fashion-title-mobile {
+    width: 1800px;
+    font-size: 50px;
+    letter-spacing: 5px;
+    color: black;
+    top: 95px;
+}
+
+.friendly-title-mobile {
+    top: 155px;
+    font-size: 45px;
+    background-image: linear-gradient(266deg, var(--wdtBorderColor) 0%, transparent 29%, var(--wdtBorderColor), transparent 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgb(89, 84, 84) !important;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: bg-text-mov 4s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+    animation: bg-text-mov 4s cubic-bezier(0.39, 0.58, 0.57, 1) infinite;
+    display: inline-block;
+    line-height: 1;
+    -webkit-text-stroke-width: 2px;
+}
