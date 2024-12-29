@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "install": "npm install --legacy-peer-deps"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.13.5",
@@ -47,5 +46,10 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "vite": "^5.4.1"
+  },
+  "overrides": {
+    "react-image-magnifiers": {
+      "react": "16.14.0"
+    }
   }
 }
