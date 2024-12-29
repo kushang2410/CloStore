@@ -41,7 +41,7 @@ const Signup = () => {
     formDataToSend.append('profilePicture', formData.profilePicture);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formDataToSend, {
+      const response = await axios.post('https://clostore.onrender.com/api/auth/register', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -61,7 +61,7 @@ const Signup = () => {
   const handleGoogleSignIn = async () => {
     try {
       const { idToken, user, token } = await signInWithGoogle();
-      const response = await axios.post('http://localhost:5000/api/auth/google-auth', { idToken });
+      const response = await axios.post('https://clostore.onrender.com/api/auth/google-auth', { idToken });
 
       if (response.data.success) {
         localStorage.setItem('token', token);

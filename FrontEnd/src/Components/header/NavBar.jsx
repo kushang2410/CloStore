@@ -30,7 +30,7 @@ const NavBar = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/products');
+        const response = await axios.get('https://clostore.onrender.com/api/products');
         setAllProducts(response.data);
       } catch (error) {
         console.error('Error fetching product details:', error);

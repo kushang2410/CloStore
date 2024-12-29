@@ -18,7 +18,7 @@ const ProductsView = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/api/products");
+                const response = await axios.get("https://clostore.onrender.com/api/products");
                 setProducts(response.data);
 
                 if (!initialLoad) {
@@ -43,7 +43,7 @@ const ProductsView = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/products/${id}`, {
+            await axios.delete(`https://clostore.onrender.com/api/products/${id}`, {
                 headers: {
                     "x-auth-token": user.token,
                 },
@@ -94,7 +94,7 @@ const ProductsView = () => {
                     </thead>
                     <tbody>
                         {currentProducts.map((product) => {
-                            const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
+                            const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                             return (
                                 <tr key={product._id}>
                                     <td>
@@ -123,7 +123,7 @@ const ProductsView = () => {
             <div className="d-lg-none">
                 <div className="row g-4">
                     {currentProducts.map((product) => {
-                        const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
+                        const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                         return (
                             <div className="col-12" key={product._id}>
                                 <div className="card shadow-sm w-100">

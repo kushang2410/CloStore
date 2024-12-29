@@ -44,7 +44,7 @@ const Account = () => {
         formData.append('profilePicture', file);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/update-profile-picture', formData, {
+            const response = await axios.post('https://clostore.onrender.com/api/auth/update-profile-picture', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${user.token}`
@@ -90,7 +90,7 @@ const Account = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put('http://localhost:5000/api/auth/update-user', {
+            const response = await axios.put('https://clostore.onrender.com/api/auth/update-user', {
                 userId: user._id,
                 ...userData,
             }, {
@@ -116,7 +116,7 @@ const Account = () => {
         }
 
         try {
-            const response = await axios.get('http://localhost:5000/api/auth/all-users', {
+            const response = await axios.get('https://clostore.onrender.com/api/auth/all-users', {
                 headers: {
                     Authorization: `Bearer ${user.token}`,
                 },
@@ -155,7 +155,7 @@ const Account = () => {
                                 <div className="bg-white p-4 mb-4 shadow-sm rounded">
                                     <div className="d-flex flex-column align-items-center">
                                         <img src={user ? user.profilePicture.startsWith('http')
-                                            ? user.profilePicture : `http://localhost:5000${user.profilePicture}` : 'https://via.placeholder.com/100'}
+                                            ? user.profilePicture : `https://clostore.onrender.com${user.profilePicture}` : 'https://via.placeholder.com/100'}
                                             alt="User" className="rounded-circle mb-3"
                                             style={{ width: '100px', height: '100px', objectFit: 'cover', border: '3px solid #007bff', }} />
                                         {isEditing ? (

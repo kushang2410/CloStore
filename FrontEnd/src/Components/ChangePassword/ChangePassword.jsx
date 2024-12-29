@@ -15,7 +15,7 @@ const ChangePassword = () => {
       const email = localStorage.getItem('resetEmail');
       const payLoad = { email, newPassword };
       console.log('Payload:', payLoad);
-      const response = await axios.post('http://localhost:5000/api/auth/change-password', payLoad);
+      const response = await axios.post('https://clostore.onrender.com/api/auth/change-password', payLoad);
       console.log('Password Change Response:', response.data); // Log the response
       setMessage(response.data);
       navigate('/login');

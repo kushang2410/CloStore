@@ -66,7 +66,7 @@ const Wishlist = () => {
                         </thead>
                         <tbody>
                             {wishlist.map((product) => {
-                                const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
+                                const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                                 return (
                                     <tr key={product._id}>
                                         <td className='pt-5'>
@@ -98,7 +98,7 @@ const Wishlist = () => {
             <div className="d-lg-none">
                 <div className="row g-4">
                     {wishlist.map((product) => {
-                        const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
+                        const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                         return (
                             <div className="col-12" key={product._id}>
                                 <div className="card shadow-sm w-100 mb-3">

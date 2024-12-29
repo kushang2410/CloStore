@@ -12,7 +12,7 @@ const VerifyOTP = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/verify-otp', { otp });
+      const response = await axios.post('https://clostore.onrender.com/api/auth/verify-otp', { otp });
       setMessage(response.data);
       navigate('/change-password');
     } catch (error) {

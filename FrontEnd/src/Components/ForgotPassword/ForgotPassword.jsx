@@ -12,7 +12,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
+      const response = await axios.post('https://clostore.onrender.com/api/auth/forgot-password', { email });
       setMessage(response.data);
       localStorage.setItem('resetEmail', email);
       navigate('/verify-otp');
