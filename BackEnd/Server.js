@@ -79,6 +79,11 @@ app.use('/assets', express.static(path.join(__dirname, '..', 'FrontEnd', 'src', 
 app.use('/api/auth', require('./Router/userRoutes'));
 app.use('/api/products', require('./Router/productRoutes')(upload));
 
+// Serve the frontend's index.html for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'FrontEnd', 'build', 'index.html'));
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
