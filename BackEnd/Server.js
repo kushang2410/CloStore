@@ -18,10 +18,13 @@ connectDB();
 const app = express();
 
 // Enable CORS
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true
-}));
+const corsOptions = {
+  origin: ['https://clostore.vercel.app', 'http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 // Init Middleware
 app.use(express.json({ extended: false }));
@@ -49,7 +52,10 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage: storage });
+const upload = multer({ 
+  storage: storage,
+  limits: { fileSize: 10 * 1024 * 1024 } // 10MB limit
+});
 
 // Handle multer errors
 app.use((err, req, res, next) => {
