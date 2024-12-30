@@ -81,7 +81,7 @@ app.use('/api/products', require('./Router/productRoutes')(upload));
 
 // Serve the frontend's index.html for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'FrontEnd', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'FrontEnd', 'dist', 'index.html'));
 });
 
 // Error handling middleware
