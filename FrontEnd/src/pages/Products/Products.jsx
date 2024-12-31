@@ -37,7 +37,7 @@ const Products = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`https://clostore.onrender.com/api/products?category=${category || ''}`);
+                const response = await axios.get(`http://localhost:5000/api/products?category=${category || ''}`);
                 const productsWithDetails = addRandomDetails(response.data);
                 setProducts(productsWithDetails);
             } catch (serverError) {
@@ -109,7 +109,7 @@ const Products = () => {
     const handleFilterSubmit = async (newFilters) => {
         setFilters(newFilters);
         try {
-            const response = await axios.get(`https://clostore.onrender.com/api/products`, {
+            const response = await axios.get(`http://localhost:5000/api/products`, {
                 params: {
                     category: newFilters.selectedCategory || category || '',
                     color: newFilters.selectedColors.join(','),
@@ -218,7 +218,7 @@ const Products = () => {
                         <FilterOffCanvas onFilterSubmit={handleFilterSubmit} />
                         <div className="row">
                             {sortedProducts.slice(0, displayedProducts).map(product => {
-                                const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
+                                const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
                                 const isInWishlist = wishlist.some(item => item._id === product._id);
                                 const customClass = layout === 'col-3' ? 'product-col-3' :
                                     layout === 'col-6' ? 'product-col-6' :
@@ -236,7 +236,7 @@ const Products = () => {
                                                 <p className="product-category d-none">{product.category}</p>
                                                 <h6 className="product-title position-relative mt-3">
                                                     <Link to={`/productdetails/${product._id}`} className='text-decoration-none text-black fw-light'>{product.name}</Link>
-                                                    <button className="product-btn-wl position-absolute top-50 end-0 bg-transparent border-0" title="Toggle Wishlist" onClick={() => handleWishlistToggle(product)}>
+                                                    <button className="product-btn-wl position-absolute top-0 end-0 bg-transparent border-0" title="Toggle Wishlist" onClick={() => handleWishlistToggle(product)}>
                                                         {isInWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
                                                     </button>
                                                     {layout === 'col-12' ? (

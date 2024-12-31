@@ -68,26 +68,26 @@ const MobileHeader = () => {
                 </div>
                 <div className="offcanvas-body">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
+                        <li className="nav-item" data-bs-dismiss="offcanvas">
                             <Link className="nav-link text-dark" to="/">
                                 <FaHome />
                                 <span className="ms-4">Home</span>
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" data-bs-dismiss="offcanvas">
                             <Link className="nav-link text-dark" to="/products">
                                 <FaShop />
                                 <span className="ms-4">Shop</span>
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" style={{ cursor: "pointer" }}>
                             <div className="accordion" id="categoryAccordion">
                                 <div className="accordion-item">
                                     <h2 className="accordion-header fw-normal my-2" id="categoryHeading">
                                         <div className="custom-accordion-button" data-bs-toggle="collapse"
                                             data-bs-target="#categoryCollapse" aria-expanded="false"
                                             aria-controls="categoryCollapse" style={{ fontSize: "18px" }}>
-                                            <MdCategory className="me-4"/>
+                                            <MdCategory className="me-4" />
                                             Categories
                                         </div>
                                     </h2>
@@ -125,13 +125,13 @@ const MobileHeader = () => {
                                 </div>
                             </div>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" data-bs-dismiss="offcanvas">
                             <Link className="nav-link text-dark" to="/about">
                                 <BiMessageSquareDetail />
                                 <span className="ms-4">About</span>
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item" data-bs-dismiss="offcanvas">
                             <Link className="nav-link text-dark" to="/contact">
                                 <IoIosContact />
                                 <span className="ms-4">Contact Us</span>
@@ -141,14 +141,14 @@ const MobileHeader = () => {
 
                     <ul className="navbar-nav mt-4">
                         {user ? (
-                            <li className="nav-item">
+                            <li className="nav-item" data-bs-dismiss="offcanvas">
                                 <Link className="nav-link text-dark" to="/account">
                                     <RiContactsFill />
                                     <span className="ms-4">Account</span>
                                 </Link>
                             </li>
                         ) : (
-                            <li className="nav-item">
+                            <li className="nav-item" data-bs-dismiss="offcanvas">
                                 <Link className="nav-link text-dark" to="/login">
                                     Login
                                 </Link>

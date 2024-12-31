@@ -25,11 +25,12 @@ const FilterOffCanvas = ({ onFilterSubmit }) => {
     const [selectedCategory, setSelectedCategory] = useState('');
     const sliderRef = useRef(null);
     const [product, setProduct] = useState(null);
+    const [hasFilters, setHasFilters] = useState(false);
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('https://clostore.onrender.com/api/products');
+                const response = await axios.get('http://localhost:5000/api/products');
                 const uniqueCategories = [...new Set(response.data.map(product => product.category))];
                 const brandCounts = response.data.reduce((acc, product) => {
                     acc[product.brand] = (acc[product.brand] || 0) + 1;
@@ -52,6 +53,11 @@ const FilterOffCanvas = ({ onFilterSubmit }) => {
 
         fetchProducts();
     }, []);
+
+    useEffect(() => {
+        const filtersSelected = selectedBrands.length > 0 || selectedColors.length > 0 || selectedSizes.length > 0 || selectedCategory !== '' || priceRange[0] !== 20 || priceRange[1] !== 3996;
+        setHasFilters(filtersSelected);
+    }, [selectedBrands, selectedColors, selectedSizes, selectedCategory, priceRange]);
 
     const toggleAccordion = (id) => {
         setIsOpen((prevState) => ({
@@ -91,26 +97,8 @@ const FilterOffCanvas = ({ onFilterSubmit }) => {
         }
     };
 
-    const clearAllBrands = () => {
-        setSelectedBrands([]);
-    };
-
-    const clearAllColors = () => {
-        setSelectedColors([]);
-    };
-
-    const clearAllSizes = () => {
-        setSelectedSizes([]);
-    };
-
-    const handleSubmit = () => {
-        onFilterSubmit({ priceRange, selectedBrands, selectedColors, selectedSizes, selectedCategory });
-        const offcanvasElement = document.getElementById('shopFilterAside');
-        const offcanvas = new window.bootstrap.Offcanvas(offcanvasElement);
-        offcanvas.hide();
-    };
-
     const clearAllFilters = () => {
+        // Clear all filter states
         setPriceRange([20, 3996]);
         setSelectedBrands([]);
         setSelectedColors([]);
@@ -119,11 +107,28 @@ const FilterOffCanvas = ({ onFilterSubmit }) => {
         if (sliderRef.current) {
             sliderRef.current.reset();
         }
+
+        // Notify parent component that filters are cleared
+        onFilterSubmit({ priceRange: [20, 3996], selectedBrands: [], selectedColors: [], selectedSizes: [], selectedCategory: '' });
+
+        // Close the offcanvas
+        const offcanvasElement = document.getElementById('shopFilterAside');
+        const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+        offcanvas.hide();
     };
 
     const handleCategorySelect = (category) => {
         setSelectedCategory(category);
-        onFilterSubmit({ priceRange, selectedBrands, selectedColors, selectedSizes, selectedCategory: category });
+    };
+
+    const handleSetFilter = () => {
+        // Notify parent component with the selected filters
+        onFilterSubmit({ priceRange, selectedBrands, selectedColors, selectedSizes, selectedCategory });
+
+        // Close the offcanvas
+        const offcanvasElement = document.getElementById('shopFilterAside');
+        const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+        offcanvas.hide();
     };
 
     return (
@@ -290,11 +295,13 @@ const FilterOffCanvas = ({ onFilterSubmit }) => {
                     </div>
                 </div>
                 <div className="offcanvas-footer mt-4">
-                    <button className="px-4 wdt-button-3 py-2 fs-6 rounded-4 ms-3 py-2 px-3" onClick={handleSubmit}>
+                    {hasFilters && (
+                        <button className="px-4 wdt-button-3 py-2 fs-6 rounded-4 ms-3 py-2 px-3" onClick={clearAllFilters}>
+                            Clear Filter
+                        </button>
+                    )}
+                    <button className="px-4 wdt-button-3 py-2 fs-6 rounded-4 ms-3 py-2 px-3" onClick={handleSetFilter}>
                         Set Filter
-                    </button>
-                    <button className="px-4 wdt-button-3 py-2 fs-6 rounded-4 ms-3 py-2 px-3" onClick={clearAllFilters}>
-                        Clear All Filters
                     </button>
                 </div>
             </div>
