@@ -8,6 +8,7 @@ export const useCart = () => useContext(CartContext);
 export const CartProvider = ({ children }) => {
   const { user } = useAuth();
   const [cart, setCart] = useState([]);
+  const [toastConfig, setToastConfig] = useState(null);
 
   useEffect(() => {
     if (user) {
@@ -25,8 +26,13 @@ export const CartProvider = ({ children }) => {
   }, [cart, user]);
 
   const addToCart = (product) => {
-    setCart(prevCart => {
-      const existingProductIndex = prevCart.findIndex(item => item._id === product._id);
+    if (!user) {
+      setToastConfig({ type: 'error', message: 'You need to login to add products to the cart.' });
+      return;
+    }
+
+    setCart((prevCart) => {
+      const existingProductIndex = prevCart.findIndex((item) => item._id === product._id);
       if (existingProductIndex !== -1) {
         const updatedCart = [...prevCart];
         updatedCart[existingProductIndex].quantity += 1;
@@ -38,12 +44,12 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (productId) => {
-    setCart(prevCart => prevCart.filter(item => item._id !== productId));
+    setCart((prevCart) => prevCart.filter((item) => item._id !== productId));
   };
 
   const updateCartItemQuantity = (productId, quantity) => {
-    setCart(prevCart =>
-      prevCart.map(item =>
+    setCart((prevCart) =>
+      prevCart.map((item) =>
         item._id === productId ? { ...item, quantity } : item
       )
     );
@@ -64,8 +70,12 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
+  const resetToast = () => {
+    setToastConfig(null);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateCartItemQuantity, emptyCart, clearCart, getTotal }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateCartItemQuantity, emptyCart, clearCart, getTotal, toastConfig, resetToast }}>
       {children}
     </CartContext.Provider>
   );
