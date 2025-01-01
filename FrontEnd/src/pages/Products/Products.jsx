@@ -18,8 +18,8 @@ const Products = () => {
     const [layout, setLayout] = useState('col-3');
     const [toastMessage, setToastMessage] = useState(null);
     const [toastType, setToastType] = useState(null);
-    const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
-    const { cart, addToCart, removeFromCart } = useCart();
+    const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
+    const { cart, addToCart, removeFromCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const category = queryParams.get('category');
@@ -270,6 +270,20 @@ const Products = () => {
                 </div>
             </section>
             {toastMessage && <SnackbarNotification type={toastType} message={toastMessage} onClose={handleCloseSnackbar} />}
+            {wishlistToast && (
+                <SnackbarNotification
+                    type={wishlistToast.type}
+                    message={wishlistToast.message}
+                    onClose={resetWishlistToast}
+                />
+            )}
+            {cartToast && (
+                <SnackbarNotification
+                    type={cartToast.type}
+                    message={cartToast.message}
+                    onClose={resetCartToast}
+                />
+            )}
         </div>
     );
 };

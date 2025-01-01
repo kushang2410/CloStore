@@ -15,8 +15,8 @@ const ProductDetails = () => {
     const [selectedSize, setSelectedSize] = useState('');
     const [selectedColor, setSelectedColor] = useState('');
     const [quantity, setQuantity] = useState(1);
-    const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
-    const { cart, addToCart, updateCartItemQuantity } = useCart();
+    const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
+        const { cart, addToCart, removeFromCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const [isZoomed, setIsZoomed] = useState(false);
     const [zoomStyle, setZoomStyle] = useState({});
     const [activeTab, setActiveTab] = useState('information');
@@ -43,7 +43,7 @@ const ProductDetails = () => {
     useEffect(() => {
         const fetchProductDetails = async () => {
             try {
-                const response = await axios.get(`https://clostore.onrender.com/api/products/${id}`);
+                const response = await axios.get(`http://localhost:5000/api/products/${id}`);
                 setProduct(response.data);
                 const initialColors = getLimitedColorsForProduct(response.data._id);
                 const initialSizes = getLimitedSizesForProduct(response.data._id);
@@ -156,7 +156,7 @@ const ProductDetails = () => {
                 <div className="row">
                     <div className="col-lg-4 me-5">
                         <div className="product-image-container" style={{ overflow: 'hidden', position: 'relative' }}>
-                            <img src={`https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`}
+                            <img src={`http://localhost:5000/${product.image.replace(/\\/g, '/')}`}
                                 alt={product.name} className="w-100" onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}
                                 style={{ ...zoomStyle, transition: 'transform 0.2s ease', cursor: 'zoom-in', }} />
@@ -229,6 +229,20 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 {toastConfig && <SnackbarNotification type={toastConfig.type} message={toastConfig.message} onClose={handleCloseSnackbar} />}
+                {wishlistToast && (
+                    <SnackbarNotification
+                        type={wishlistToast.type}
+                        message={wishlistToast.message}
+                        onClose={resetWishlistToast}
+                    />
+                )}
+                {cartToast && (
+                    <SnackbarNotification
+                        type={cartToast.type}
+                        message={cartToast.message}
+                        onClose={resetCartToast}
+                    />
+                )}
             </section>
             <section className='my-10'>
                 <SwiperCarousel2 />
