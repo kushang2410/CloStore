@@ -34,6 +34,29 @@ const Products = () => {
 
     const [searchQuery, setSearchQuery] = useState('');
 
+    // Function to update layout based on screen width
+    const updateLayout = () => {
+        const screenWidth = window.innerWidth;
+        if (screenWidth >= 320 && screenWidth < 768) {
+            setLayout('col-12');
+        } else if (screenWidth >= 768 && screenWidth < 992) {
+            setLayout('col-6');
+        } else if (screenWidth >= 992 && screenWidth < 1120) {
+            setLayout('col-4');
+        } else if (screenWidth >= 1220) {
+            setLayout('col-3');
+        }
+    };
+
+    // Add event listener for window resize
+    useEffect(() => {
+        updateLayout(); // Set initial layout
+        window.addEventListener('resize', updateLayout);
+        return () => {
+            window.removeEventListener('resize', updateLayout);
+        };
+    }, []);
+
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -225,7 +248,7 @@ const Products = () => {
                                         layout === 'col-4' ? 'product-col-4' :
                                             layout === 'col-12' ? 'product-col-12' : '';
                                 return (
-                                    <div className={`col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 mb-4 ${customClass}`} key={product._id}>
+                                    <div className={`${layout} mb-4 ${customClass}`} key={product._id}>
                                         <div className={`product-info position-relative mt-4 ${layout === 'col-12' ? 'd-flex justify-content-between' : ''}`}>
                                             <Link to={`/productdetails/${product._id}`} className='text-decoration-none'>
                                                 <div className={`product-image-container ${layout === 'col-12' ? 'w-50' : 'w-100'}`}>
@@ -236,7 +259,7 @@ const Products = () => {
                                                 <p className="product-category d-none">{product.category}</p>
                                                 <h6 className="product-title position-relative mt-3">
                                                     <Link to={`/productdetails/${product._id}`} className='text-decoration-none text-black fw-light'>{product.name}</Link>
-                                                    <button className="product-btn-wl position-absolute top-0 end-0 bg-transparent border-0" title="Toggle Wishlist" onClick={() => handleWishlistToggle(product)}>
+                                                    <button className="product-btn-wl position-absolute top-0 end-0 bg-transparent border-0 shop-btn" title="Toggle Wishlist" onClick={() => handleWishlistToggle(product)}>
                                                         {isInWishlist ? <FaHeart color="red" /> : <FaRegHeart />}
                                                     </button>
                                                     {layout === 'col-12' ? (
