@@ -39,7 +39,7 @@ const SwiperCrousel2 = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/products`);
+                const response = await axios.get(`https://clostore.onrender.com/api/products`);
                 setProducts(response.data.slice(20, 40));
             } catch (error) {
                 console.error('Error fetching product details:', error);
@@ -98,7 +98,7 @@ const SwiperCrousel2 = () => {
             >
                 {products.map(product => {
                     const isInWishlist = wishlist.some(item => item._id === product._id);
-                    const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
+                    const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                     return (
                         <SwiperSlide key={product._id}>
                             <div className="product-img-wrapper position-relative">

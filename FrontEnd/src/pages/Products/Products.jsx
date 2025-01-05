@@ -60,7 +60,7 @@ const Products = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/products?category=${category || ''}`);
+                const response = await axios.get(`https://clostore.onrender.com/api/products?category=${category || ''}`);
                 const productsWithDetails = addRandomDetails(response.data);
                 setProducts(productsWithDetails);
             } catch (serverError) {
@@ -132,7 +132,7 @@ const Products = () => {
     const handleFilterSubmit = async (newFilters) => {
         setFilters(newFilters);
         try {
-            const response = await axios.get(`http://localhost:5000/api/products`, {
+            const response = await axios.get(`https://clostore.onrender.com/api/products`, {
                 params: {
                     category: newFilters.selectedCategory || category || '',
                     color: newFilters.selectedColors.join(','),
@@ -241,7 +241,7 @@ const Products = () => {
                         <FilterOffCanvas onFilterSubmit={handleFilterSubmit} />
                         <div className="row">
                             {sortedProducts.slice(0, displayedProducts).map(product => {
-                                const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
+                                const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                                 const isInWishlist = wishlist.some(item => item._id === product._id);
                                 const customClass = layout === 'col-3' ? 'product-col-3' :
                                     layout === 'col-6' ? 'product-col-6' :
