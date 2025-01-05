@@ -486,7 +486,6 @@
     .about-img-4 {
         top: 0;
     }
-
 }
 
 @media (min-width: 1200px) {
@@ -574,10 +573,10 @@
     }
 
     .navbar-overlay {
-        top: -133px;
-        left: -9px;
-        width: 295px;
-        height: 295px;
+        top: -89px;
+        left: 0px;
+        width: 275px;
+        height: 275px;
     }
 
     .shop-banner-title {
@@ -612,7 +611,7 @@
 
 @media (min-width: 1620px) {
     .dropdown-menu-center {
-        left: -830px !important;
+        left: -702px !important;
     }
 
     .start-21 {
@@ -668,5 +667,91 @@
         overflow-x: scroll;
         overflow-y: hidden;
         scrollbar-width: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .shop-btn {
+        top: 30px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+    .product-col-12 .product-main-image {
+        height: 200px;
+        width: 13vh;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+    .product-col-12 .product-main-image {
+        height: 220px;
+        width: 15vh;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 575px) {
+    .product-col-12 .product-main-image {
+        height: 225px;
+        width: 16vh;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .product-col-12 .product-main-image {
+        height: 330px;
+        width: 23vh;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .product-col-6 .product-main-image {
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .product-col-4 .product-main-image {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-col-3 .product-main-image {
+        height: 295px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-col-6 .product-main-image {
+        height: 600px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-col-12 .product-main-image {
+        height: 450px;
+        width: 33vh;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1220px) and (max-width: 1220px) {
+    .product-col-6 .product-main-image {
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-col-12 .product-main-image {
+        height: 530px;
+        width: 38vh;
+        object-fit: cover;
     }
 }
