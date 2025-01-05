@@ -15,11 +15,14 @@ const SwiperCrousel2 = () => {
     const { user } = useAuth();
     const { addToCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
+    const { addToCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
+    const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
     const [products, setProducts] = useState([]);
     const [autoplay, setAutoplay] = useState({ delay: 1000, disableOnInteraction: false });
 
     const handleAddToCart = (product) => {
         if (!user) {
+            addToCart(product);
             addToCart(product);
         } else {
             addToCart(product);
@@ -28,6 +31,7 @@ const SwiperCrousel2 = () => {
 
     const handleWishlistToggle = (product) => {
         if (!user) {
+            addToWishlist(product);
             addToWishlist(product);
         } else if (wishlist.some(item => item._id === product._id)) {
             removeFromWishlist(product._id);

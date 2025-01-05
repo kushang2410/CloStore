@@ -41,7 +41,7 @@ const TrendyProducts = () => {
                 if (storedProducts) {
                     setProducts(JSON.parse(storedProducts));
                 } else {
-                    const response = await axios.get(`https://clostore.onrender.com/api/products`);
+                    const response = await axios.get(`http://localhost:5000/api/products`);
                     const shuffledProducts = shuffleArray(response.data).slice(0, 30);
                     const productsWithRandomCategories = shuffledProducts.map(product => ({
                         ...product,
@@ -97,7 +97,7 @@ const TrendyProducts = () => {
             <div className="cards d-flex flex-wrap justify-content-center justify-content-md-start w-100 mt-6">
                 {filteredProducts.slice(0, 8).map(product => {
                     const isInWishlist = wishlist.some(item => item._id === product._id);
-                    const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
+                    const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
                     return (
                         <div key={product._id} className="trendy-product-card col-12 col-md-6 col-lg-4 col-xl-3">
                             <div className="product-img-wrapper position-relative mt-5">
