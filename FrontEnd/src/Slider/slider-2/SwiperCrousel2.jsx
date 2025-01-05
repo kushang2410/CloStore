@@ -6,15 +6,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import { useCart } from '../../Context/CartContext';
 import { useWishlist } from '../../Context/WishlistContext';
-import axios from 'axios';
 import SnackbarNotification from '../../Components/SnackbarNotification/SnackbarNotification';
+import axios from 'axios';
 import './SwiperCrousel2.css';
 
 const SwiperCrousel2 = () => {
     const navigate = useNavigate();
     const { user } = useAuth();
-    const { addToCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
-    const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
     const { addToCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
     const [products, setProducts] = useState([]);

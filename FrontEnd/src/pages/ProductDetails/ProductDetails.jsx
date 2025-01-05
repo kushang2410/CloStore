@@ -43,7 +43,7 @@ const ProductDetails = () => {
     useEffect(() => {
         const fetchProductDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/products/${id}`);
+                const response = await axios.get(`https://clostore.onrender.com/api/products/${id}`);
                 setProduct(response.data);
                 const initialColors = getLimitedColorsForProduct(response.data._id);
                 const initialSizes = getLimitedSizesForProduct(response.data._id);
@@ -156,7 +156,7 @@ const ProductDetails = () => {
                 <div className="row">
                     <div className="col-lg-4 me-5">
                         <div className="product-image-container" style={{ overflow: 'hidden', position: 'relative' }}>
-                            <img src={`http://localhost:5000/${product.image.replace(/\\/g, '/')}`}
+                            <img src={`https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`}
                                 alt={product.name} className="w-100" onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}
                                 style={{ ...zoomStyle, transition: 'transform 0.2s ease', cursor: 'zoom-in', }} />
