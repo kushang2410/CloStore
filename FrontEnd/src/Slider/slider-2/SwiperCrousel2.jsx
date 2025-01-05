@@ -6,8 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import { useCart } from '../../Context/CartContext';
 import { useWishlist } from '../../Context/WishlistContext';
-import axios from 'axios';
 import SnackbarNotification from '../../Components/SnackbarNotification/SnackbarNotification';
+import axios from 'axios';
 import './SwiperCrousel2.css';
 
 const SwiperCrousel2 = () => {
@@ -21,6 +21,7 @@ const SwiperCrousel2 = () => {
     const handleAddToCart = (product) => {
         if (!user) {
             addToCart(product);
+            addToCart(product);
         } else {
             addToCart(product);
         }
@@ -28,6 +29,7 @@ const SwiperCrousel2 = () => {
 
     const handleWishlistToggle = (product) => {
         if (!user) {
+            addToWishlist(product);
             addToWishlist(product);
         } else if (wishlist.some(item => item._id === product._id)) {
             removeFromWishlist(product._id);
@@ -39,7 +41,7 @@ const SwiperCrousel2 = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/products`);
+                const response = await axios.get(`https://clostore.onrender.com/api/products`);
                 setProducts(response.data.slice(20, 40));
             } catch (error) {
                 console.error('Error fetching product details:', error);
@@ -98,7 +100,7 @@ const SwiperCrousel2 = () => {
             >
                 {products.map(product => {
                     const isInWishlist = wishlist.some(item => item._id === product._id);
-                    const imageUrl = `http://localhost:5000/${product.image.replace(/\\/g, '/')}`;
+                    const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                     return (
                         <SwiperSlide key={product._id}>
                             <div className="product-img-wrapper position-relative">
