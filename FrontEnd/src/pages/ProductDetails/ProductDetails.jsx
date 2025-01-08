@@ -6,7 +6,6 @@ import { useWishlist } from '../../Context/WishlistContext';
 import { useCart } from '../../Context/CartContext';
 import SwiperCarousel2 from "../../Slider/slider-2/SwiperCrousel2";
 import SnackbarNotification from '../../Components/SnackbarNotification/SnackbarNotification';
-import Loader from '../../Components/Loader/Loader';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -20,7 +19,6 @@ const ProductDetails = () => {
     const [zoomStyle, setZoomStyle] = useState({});
     const [activeTab, setActiveTab] = useState('information');
     const [toastConfig, setToastConfig] = useState(null);
-    const [loading, setLoading] = useState(true);
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
@@ -65,10 +63,6 @@ const ProductDetails = () => {
 
         fetchProductDetails();
     }, [id]);
-
-    if (loading) {
-        return <Loader />;
-    }
 
     const getLimitedColorsForProduct = (productId) => {
         const startIndex = Math.abs(productId.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0)) % availableColors.length;

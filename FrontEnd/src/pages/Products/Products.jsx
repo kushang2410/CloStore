@@ -12,27 +12,6 @@ import Loader from '../../Components/Loader/Loader';
 import axios from 'axios';
 import './style.css';
 
-const ProductImage = ({ src, alt, layout, customClass }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  return (
-    <div className={`product-image-container ${layout === 'col-12' ? 'w-50' : 'w-100'}`}>
-      {!imageLoaded && (
-        <div className="loader-container d-flex justify-content-center align-items-center">
-          <Loader />
-        </div>
-      )}
-      <img
-        src={src}
-        alt={alt}
-        className={`product-main-image ${customClass}`}
-        onLoad={() => setImageLoaded(true)}
-        style={{ display: imageLoaded ? 'block' : 'none' }}
-      />
-    </div>
-  );
-};
-
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [displayedProducts, setDisplayedProducts] = useState(16);
@@ -40,6 +19,7 @@ const Products = () => {
   const [layout, setLayout] = useState('col-3');
   const [toastMessage, setToastMessage] = useState(null);
   const [toastType, setToastType] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
   const { cart, addToCart, removeFromCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
   const location = useLocation();
@@ -92,6 +72,8 @@ const Products = () => {
         } catch (jsonError) {
           console.error('Error loading local products:', jsonError);
         }
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -259,6 +241,7 @@ const Products = () => {
             </div>
             <FilterOffCanvas onFilterSubmit={handleFilterSubmit} />
             <div className="row">
+              {isLoading && <Loader />}
               {sortedProducts.slice(0, displayedProducts).map(product => {
                 const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
                 const isInWishlist = wishlist.some(item => item._id === product._id);
@@ -270,7 +253,13 @@ const Products = () => {
                   <div className={`${layout} mb-4 ${customClass}`} key={product._id}>
                     <div className={`product-info position-relative mt-4 ${layout === 'col-12' ? 'd-flex justify-content-between' : ''}`}>
                       <Link to={`/productdetails/${product._id}`} className='text-decoration-none'>
-                        <ProductImage src={imageUrl} alt={product.name} layout={layout} customClass={customClass} />
+                        <div className={`product-image-container ${layout === 'col-12' ? 'w-50' : 'w-100'}`}>
+                          <img
+                            src={imageUrl}
+                            alt={product.name}
+                            className={`product-main-image ${customClass}`}
+                          />
+                        </div>
                       </Link>
                       <div className={`product-details ${layout === 'col-12' ? 'w-50 ms-3' : ''}`}>
                         <p className="product-category d-none">{product.category}</p>

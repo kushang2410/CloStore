@@ -16,7 +16,7 @@ const TrendyProducts = () => {
     const { addToCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     const handleAddToCart = (product) => {
         if (!user) {
@@ -55,16 +55,12 @@ const TrendyProducts = () => {
             } catch (error) {
                 console.error('Error fetching product details:', error);
             } finally {
-                setLoading(false);
+                setIsLoading(false);
             }
         };
 
         fetchProducts();
     }, []);
-
-    if (loading) {
-        return <Loader />;
-    }
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -96,6 +92,7 @@ const TrendyProducts = () => {
             </div>
 
             <div className="cards d-flex flex-wrap justify-content-center justify-content-md-start w-100 mt-6">
+                {isLoading && <Loader />}
                 {filteredProducts.slice(0, 8).map(product => {
                     const isInWishlist = wishlist.some(item => item._id === product._id);
                     const imageUrl = `https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`;
