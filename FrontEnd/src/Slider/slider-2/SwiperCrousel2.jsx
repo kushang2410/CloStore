@@ -1,13 +1,14 @@
+import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { FaRegHeart, FaHeart, FaStar } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import { useCart } from '../../Context/CartContext';
 import { useWishlist } from '../../Context/WishlistContext';
 import SnackbarNotification from '../../Components/SnackbarNotification/SnackbarNotification';
-import axios from 'axios';
+import Loader from '../../Components/Loader/Loader';
 import './SwiperCrousel2.css';
 
 const SwiperCrousel2 = () => {
@@ -17,6 +18,7 @@ const SwiperCrousel2 = () => {
     const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
     const [products, setProducts] = useState([]);
     const [autoplay, setAutoplay] = useState({ delay: 1000, disableOnInteraction: false });
+    const [loading, setLoading] = useState(true);
 
     const handleAddToCart = (product) => {
         if (!user) {
@@ -52,11 +54,17 @@ const SwiperCrousel2 = () => {
                 } catch (jsonError) {
                     console.error('Error loading local product details:', jsonError);
                 }
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchProducts();
     }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
 
     const handleMouseEnter = () => {
         setAutoplay({ ...autoplay, delay: 999999999 });

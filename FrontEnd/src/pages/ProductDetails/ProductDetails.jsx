@@ -6,8 +6,7 @@ import { useWishlist } from '../../Context/WishlistContext';
 import { useCart } from '../../Context/CartContext';
 import SwiperCarousel2 from "../../Slider/slider-2/SwiperCrousel2";
 import SnackbarNotification from '../../Components/SnackbarNotification/SnackbarNotification';
-import ProductDetailsBanner1 from '../../assets/images/banner/productdetailsbanner-1.webp';
-import ProductDetailsBanner2 from '../../assets/images/banner/productdetailsbanner-2.webp';
+import Loader from '../../Components/Loader/Loader';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -16,11 +15,12 @@ const ProductDetails = () => {
     const [selectedColor, setSelectedColor] = useState('');
     const [quantity, setQuantity] = useState(1);
     const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
-        const { cart, addToCart, removeFromCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
+    const { cart, addToCart, removeFromCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const [isZoomed, setIsZoomed] = useState(false);
     const [zoomStyle, setZoomStyle] = useState({});
     const [activeTab, setActiveTab] = useState('information');
     const [toastConfig, setToastConfig] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
@@ -58,14 +58,16 @@ const ProductDetails = () => {
                 } catch (jsonError) {
                     console.error('Error loading local product details:', jsonError);
                 }
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchProductDetails();
     }, [id]);
 
-    if (!product) {
-        return <div className="text-center mt-5">Loading...</div>;
+    if (loading) {
+        return <Loader />;
     }
 
     const getLimitedColorsForProduct = (productId) => {

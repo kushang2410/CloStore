@@ -1,11 +1,12 @@
+import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaStar, FaRegHeart, FaHeart } from 'react-icons/fa';
 import { useAuth } from '../../Context/AuthContext';
 import { useCart } from '../../Context/CartContext';
 import { useWishlist } from '../../Context/WishlistContext';
-import axios from 'axios';
 import SnackbarNotification from '../../Components/SnackbarNotification/SnackbarNotification';
+import Loader from '../Loader/Loader';
 import './style.css';
 
 const TrendyProducts = () => {
@@ -15,6 +16,7 @@ const TrendyProducts = () => {
     const { addToCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
     const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const handleAddToCart = (product) => {
         if (!user) {
@@ -52,18 +54,17 @@ const TrendyProducts = () => {
                 }
             } catch (error) {
                 console.error('Error fetching product details:', error);
-                try {
-                    const localResponse = await axios.get('../../../../BackEnd/data/products.json');
-                    const product = localResponse.data.find(p => p._id.$oid === id);
-                    setProducts(product);
-                } catch (jsonError) {
-                    console.error('Error loading local product details:', jsonError);
-                }
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchProducts();
     }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {

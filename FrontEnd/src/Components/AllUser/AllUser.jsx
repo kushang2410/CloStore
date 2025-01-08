@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Loader from '../Loader/Loader';
 
 const AllUser = ({ user }) => {
     const [users, setUsers] = useState([]);
@@ -68,7 +69,7 @@ const AllUser = ({ user }) => {
     };
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <Loader />;
     }
 
     if (error) {
