@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://clostore.vercel.app/sitemap.xml
