@@ -275,7 +275,7 @@ const Products = () => {
                           )}
                         </h6>
                         <div className="product-card-price d-flex">
-                          <span className="money price">$ {product.price}</span>
+                          <span className="money price">₹ {product.price}</span>
                         </div>
                         <div className="product-card-review d-flex justify-content-between align-items-center">
                           <div className="reviews-group d-flex">

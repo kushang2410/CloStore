@@ -67,7 +67,7 @@ const Order = () => {
                                         </button>
                                     </div>
                                     <div>
-                                        <p>Total: ${orderTotal.toFixed(2)}</p>
+                                        <p>Total: ₹{orderTotal.toFixed(2)}</p>
                                     </div>
                                     <button
                                         className="btn-custom wdt-button-3 py-2 px-3"
@@ -98,7 +98,7 @@ const Order = () => {
                                         <ul>
                                             {currentOrder.items.map(item => (
                                                 <li key={item._id}>
-                                                    {item.name} - ${item.price * item.quantity.toFixed(2)}
+                                                    {item.name} - ₹{item.price * item.quantity.toFixed(2)}
                                                 </li>
                                             ))}
                                         </ul>

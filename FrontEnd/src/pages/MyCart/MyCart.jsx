@@ -104,7 +104,7 @@ const MyCart = () => {
                                                             {item.name}
                                                         </td>
                                                         <td className='total' data-title="Price">
-                                                            <span className="cart-align"><span>$</span>{item.price}</span>
+                                                            <span className="cart-align"><span>₹</span>{item.price}</span>
                                                         </td>
                                                         <td className='total' data-title="Quantity">
                                                             <div className="input-group cart-align border border-1 rounded-5">
@@ -114,7 +114,7 @@ const MyCart = () => {
                                                             </div>
                                                         </td>
                                                         <td className='total' data-title="Subtotal">
-                                                            <span className="cart-align"><span>$</span>{(item.price * (quantities[item._id] || 1)).toFixed(2)}</span>
+                                                            <span className="cart-align"><span>₹</span>{(item.price * (quantities[item._id] || 1)).toFixed(2)}</span>
                                                         </td>
                                                     </tr>
                                                 );
@@ -161,7 +161,7 @@ const MyCart = () => {
                                                         />
                                                         <div className="ms-3">
                                                             <h5 className="card-title mb-1">{item.name}</h5>
-                                                            <p className="card-text mb-1">${item.price}</p>
+                                                            <p className="card-text mb-1">₹{item.price}</p>
                                                             <div className="input-group border border-1 rounded-5 mt-3">
                                                                 <button
                                                                     type="button"
@@ -188,13 +188,13 @@ const MyCart = () => {
                                                                 </button>
                                                             </div>
                                                             <p className="d-md-none d-sm-block card-text mb-0 mt-4">
-                                                                Subtotal: <span className="fw-bold">${(item.price * (quantities[item._id] || 1)).toFixed(2)}</span>
+                                                                Subtotal: <span className="fw-bold">₹{(item.price * (quantities[item._id] || 1)).toFixed(2)}</span>
                                                             </p>
                                                         </div>
                                                     </div>
                                                     <div>
                                                         <p className="d-xsm-none d-md-block card-text mb-0">
-                                                            Subtotal: <span className="fw-bold">${(item.price * (quantities[item._id] || 1)).toFixed(2)}</span>
+                                                            Subtotal: <span className="fw-bold">₹{(item.price * (quantities[item._id] || 1)).toFixed(2)}</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -238,12 +238,12 @@ const MyCart = () => {
                                                     <li>
                                                         <input type="radio" className='custom-radio' data-index="0" value="flat_rate:1" checked={shippingMethod === 'flat_rate:1'}
                                                             onChange={() => setShippingMethod('flat_rate:1')} />
-                                                        <label className='ms-2'>Flat rate: <span className="amount"><span>$</span>59.00</span></label>
+                                                        <label className='ms-2'>Flat rate: <span className="amount"><span>₹</span>59.00</span></label>
                                                     </li>
                                                     <li>
                                                         <input type="radio" className='custom-radio' data-index="0" value="local_pickup:2" checked={shippingMethod === 'local_pickup:2'}
                                                             onChange={() => setShippingMethod('local_pickup:2')} />
-                                                        <label className='ms-2'>Local pickup: <span className="amount"><span>$</span>29.00</span></label>
+                                                        <label className='ms-2'>Local pickup: <span className="amount"><span>₹</span>29.00</span></label>
                                                     </li>
                                                     <li>
                                                         <input type="radio" className='custom-radio' data-index="0" value="free_shipping:3" checked={shippingMethod === 'free_shipping:3'}
@@ -261,7 +261,7 @@ const MyCart = () => {
                                                 <strong>Total</strong>
                                             </div>
                                             <div className="col-8 text-end">
-                                                <strong><span className="amount"><span>$</span>{getTotal().toFixed(2)}</span></strong>
+                                                <strong><span className="amount"><span>₹</span>{getTotal().toFixed(2)}</span></strong>
                                             </div>
                                         </div>
                                     </div>

@@ -115,7 +115,7 @@ const TrendyProducts = () => {
                                     <button className="product-atc product-btn position-absolute border-0 text-uppercase fw-medium" title="Add to Cart" onClick={() => handleAddToCart(product)}>Add To Cart</button>
                                 </h6>
                                 <div className="product-card-price d-flex">
-                                    <span className="money price">$ {product.price}</span>
+                                    <span className="money price">₹ {product.price}</span>
                                 </div>
                                 <div className="product-card-review d-flex align-items-center justify-content-between">
                                     <div className="reviews-group d-flex">
@@ -123,7 +123,7 @@ const TrendyProducts = () => {
                                             <FaStar key={index} color={index < product.rating ? '#ffc78b' : '#ccc'} />
                                         ))}
                                     </div>
-                                    <span className="reviews-note text-lowercase text-secondary ms-1">{product.reviews}k+ reviews</span>
+                                    <span className="reviews-note text-lowercase text-secondary ms-1">2k+ reviews</span>
                                 </div>
                                 <button className="product-btn-wl position-absolute top-0 end-0 bg-transparent border-0" title="Toggle Wishlist" onClick={() => handleWishlistToggle(product)}>
                                     {isInWishlist ? <FaHeart color="red" /> : <FaRegHeart />}

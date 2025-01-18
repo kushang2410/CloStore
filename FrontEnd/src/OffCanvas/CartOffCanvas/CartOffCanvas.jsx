@@ -78,7 +78,7 @@ const CartOffCanvas = ({ show, onHide }) => {
                   <img src={imageUrl} alt={item.name} style={{ width: "100px", marginRight: "10px" }} />
                   <div>
                     <h6>{item.name}</h6>
-                    <p>${item.price}</p>
+                    <p>₹{item.price}</p>
                     <div className="d-flex align-items-center border border-2 rounded-5">
                       <button className="btn" onClick={() => handleQuantityChange(item._id, item.quantity - 1)}>-</button>
                       <input type="number" className="form-control border border-0 ps-4" value={item.quantity} min="1" max="10" step="1"
@@ -89,7 +89,7 @@ const CartOffCanvas = ({ show, onHide }) => {
                       </button>
                     </div>
                   </div>
-                  <p className="mt-9 ms-5 text-end"> ${subtotal.toFixed(2)}</p>
+                  <p className="mt-9 ms-5 text-end"> ₹{subtotal.toFixed(2)}</p>
                 </div>
                 {index < cart.length - 1 && <hr />}
               </div>
@@ -102,7 +102,7 @@ const CartOffCanvas = ({ show, onHide }) => {
         <>
           <div className="my-2 mx-4 w-90 d-flex justify-content-between align-items-center">
             <span className="fs-5">SubTotal:</span>
-            <span className="fs-5"> ${total.toFixed(2)}</span>
+            <span className="fs-5"> ₹{total.toFixed(2)}</span>
           </div>
           <div className="offcanvas-footer my-2">
             <Link to="/mycart" className="custom-btn wdt-button-3 rounded-5 w-90 mx-4 py-2 d-inline-block text-center fs-6" onClick={onHide}>View Cart</Link>

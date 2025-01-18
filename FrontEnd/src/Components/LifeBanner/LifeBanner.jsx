@@ -15,21 +15,21 @@ const LifeBanner = () => {
             id: 1,
             image: LifeProduct1,
             title: "Raw denim short with sequins",
-            price: "$69.00",
+            price: "₹ 69.00",
             rating: 4,
         },
         {
             id: 2,
             image: LifeProduct2,
             title: "Vintage Jacket",
-            price: "$120.00",
+            price: "₹ 120.00",
             rating: 5,
         },
         {
             id: 3,
             image: LifeProduct3,
             title: "Classic Leather Boots",
-            price: "$89.00",
+            price: "₹ 89.00",
             rating: 3,
         }
     ];

@@ -231,7 +231,7 @@ const CheckOut = () => {
                                                                     </td>
                                                                     <td>
                                                                         <span className="font-weight-bold">
-                                                                            <span className="text-muted">$</span>{(item.price * item.quantity).toFixed(2)}
+                                                                            <span className="text-muted">₹</span>{(item.price * item.quantity).toFixed(2)}
                                                                         </span>
                                                                     </td>
                                                                 </tr>
@@ -242,7 +242,7 @@ const CheckOut = () => {
                                                                 <th>Subtotal</th>
                                                                 <td>
                                                                     <span className="font-weight-bold">
-                                                                        <span className="text-muted">$</span>{getSubtotal().toFixed(2)}
+                                                                        <span className="text-muted">₹</span>{getSubtotal().toFixed(2)}
                                                                     </span>
                                                                 </td>
                                                             </tr>
@@ -254,14 +254,14 @@ const CheckOut = () => {
                                                                             <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate1" value="flat_rate:1"
                                                                                 className="custom-radio" checked={shippingMethod === 'flat_rate:1'} onChange={() => setShippingMethod('flat_rate:1')} />
                                                                             <label htmlFor="shipping_method_0_flat_rate1" className="form-check-label">Flat rate: <span className="text-muted">
-                                                                                <span className="text-muted">$</span>59.00 </span>
+                                                                                <span className="text-muted">₹</span>59.00 </span>
                                                                             </label>
                                                                         </li>
                                                                         <li>
                                                                             <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_local_pickup2" value="local_pickup:2"
                                                                                 className="custom-radio" checked={shippingMethod === 'local_pickup:2'} onChange={() => setShippingMethod('local_pickup:2')} />
                                                                             <label htmlFor="shipping_method_0_local_pickup2" className="form-check-label">Local pickup: <span className="text-muted">
-                                                                                <span className="text-muted">$</span>29.00 </span>
+                                                                                <span className="text-muted">₹</span>29.00 </span>
                                                                             </label>
                                                                         </li>
                                                                         <li>
@@ -275,7 +275,7 @@ const CheckOut = () => {
                                                             <tr>
                                                                 <th>Total</th>
                                                                 <td>
-                                                                    <strong><span className="font-weight-bold"><span className="text-muted">$</span>{getTotal().toFixed(2)}
+                                                                    <strong><span className="font-weight-bold"><span className="text-muted">₹</span>{getTotal().toFixed(2)}
                                                                     </span></strong>
                                                                 </td>
                                                             </tr>
@@ -294,7 +294,7 @@ const CheckOut = () => {
                                                                             Quantity: <strong>{item.quantity}</strong>
                                                                         </p>
                                                                         <p className="card-text">
-                                                                            Subtotal: <span className="font-weight-bold"><span className="text-muted">$</span>{(item.price * item.quantity).toFixed(2)}</span>
+                                                                            Subtotal: <span className="font-weight-bold"><span className="text-muted">₹</span>{(item.price * item.quantity).toFixed(2)}</span>
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -309,14 +309,14 @@ const CheckOut = () => {
                                                                     <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate1_mobile" value="flat_rate:1"
                                                                         className="custom-radio" checked={shippingMethod === 'flat_rate:1'} onChange={() => setShippingMethod('flat_rate:1')} />
                                                                     <label htmlFor="shipping_method_0_flat_rate1_mobile" className="form-check-label">Flat rate: <span className="text-muted">
-                                                                        <span className="text-muted">$</span>59.00 </span>
+                                                                        <span className="text-muted">₹</span>59.00 </span>
                                                                     </label>
                                                                 </li>
                                                                 <li>
                                                                     <input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_local_pickup2_mobile" value="local_pickup:2"
                                                                         className="custom-radio" checked={shippingMethod === 'local_pickup:2'} onChange={() => setShippingMethod('local_pickup:2')} />
                                                                     <label htmlFor="shipping_method_0_local_pickup2_mobile" className="form-check-label">Local pickup: <span className="text-muted">
-                                                                        <span className="text-muted">$</span>29.00 </span>
+                                                                        <span className="text-muted">₹</span>29.00 </span>
                                                                     </label>
                                                                 </li>
                                                                 <li>

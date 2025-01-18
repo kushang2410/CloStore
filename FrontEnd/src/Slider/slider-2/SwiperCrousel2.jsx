@@ -122,7 +122,7 @@ const SwiperCrousel2 = () => {
                                     <div className='text-decoration-none text-black fw-light'>{product.name}</div>
                                 </h6>
                                 <div className="product-card-price d-flex">
-                                    <span className="money price">$ {product.price}</span>
+                                    <span className="money price">₹ {product.price}</span>
                                 </div>
                                 <div className="product-card-review d-flex align-items-center">
                                     <div className="reviews-group d-flex">
