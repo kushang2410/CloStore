@@ -30,7 +30,9 @@ const Home = () => {
   const isMobile = useMediaQuery("(max-width: 992px)");
 
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-12-31T23:59:59");
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 55);
+    targetDate.setHours(23, 59, 59, 999);
     const now = new Date();
     const difference = targetDate - now;
 
@@ -57,6 +59,7 @@ const Home = () => {
 
     return () => clearInterval(timer);
   }, []);
+
   return (
     <div className="mt-6">
       {isMobile ? (
