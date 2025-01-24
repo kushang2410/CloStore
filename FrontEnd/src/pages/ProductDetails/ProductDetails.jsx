@@ -14,7 +14,7 @@ const ProductDetails = () => {
     const [selectedColor, setSelectedColor] = useState('');
     const [quantity, setQuantity] = useState(1);
     const { wishlist, addToWishlist, removeFromWishlist, toastConfig: wishlistToast, resetToast: resetWishlistToast } = useWishlist();
-    const { cart, addToCart, removeFromCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
+        const { cart, addToCart, removeFromCart, toastConfig: cartToast, resetToast: resetCartToast } = useCart();
     const [isZoomed, setIsZoomed] = useState(false);
     const [zoomStyle, setZoomStyle] = useState({});
     const [activeTab, setActiveTab] = useState('information');
@@ -41,7 +41,7 @@ const ProductDetails = () => {
     useEffect(() => {
         const fetchProductDetails = async () => {
             try {
-                const response = await axios.get(`https://clostore.onrender.com/api/products/${id}`);
+                const response = await axios.get(`http://localhost:5000/api/products/${id}`);
                 setProduct(response.data);
                 const initialColors = getLimitedColorsForProduct(response.data._id);
                 const initialSizes = getLimitedSizesForProduct(response.data._id);
@@ -56,13 +56,15 @@ const ProductDetails = () => {
                 } catch (jsonError) {
                     console.error('Error loading local product details:', jsonError);
                 }
-            } finally {
-                setLoading(false);
             }
         };
 
         fetchProductDetails();
     }, [id]);
+
+    if (!product) {
+        return <div className="text-center mt-5">Loading...</div>;
+    }
 
     const getLimitedColorsForProduct = (productId) => {
         const startIndex = Math.abs(productId.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0)) % availableColors.length;
@@ -152,7 +154,7 @@ const ProductDetails = () => {
                 <div className="row">
                     <div className="col-lg-4 me-5">
                         <div className="product-image-container" style={{ overflow: 'hidden', position: 'relative' }}>
-                            <img src={`https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`}
+                            <img src={`http://localhost:5000/${product.image.replace(/\\/g, '/')}`}
                                 alt={product.name} className="w-100" onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}
                                 style={{ ...zoomStyle, transition: 'transform 0.2s ease', cursor: 'zoom-in', }} />
