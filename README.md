@@ -12,7 +12,7 @@
 - 🔍 **Advanced Search:** Quickly find your desired products with a powerful search bar.
 - 🎯 **Product Filtering:** Narrow down your choices by applying filters based on categories, price range, and more.
 - ❤️ **Wishlist Feature:** Save your favorite items for later with a user-friendly wishlist system.
-- 📊 **Order Tracking:** Keep track of your orders with detailed status updates.
+- 📊 **Order:** Keep show your orders with all detailes.
 
 ---
 
