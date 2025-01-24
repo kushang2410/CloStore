@@ -58,13 +58,8 @@ const ProductDetails = () => {
                 }
             }
         };
-
         fetchProductDetails();
     }, [id]);
-
-    if (!product) {
-        return <div className="text-center mt-5">Loading...</div>;
-    }
 
     const getLimitedColorsForProduct = (productId) => {
         const startIndex = Math.abs(productId.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0)) % availableColors.length;

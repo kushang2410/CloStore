@@ -58,7 +58,6 @@ const TrendyProducts = () => {
                 setIsLoading(false);
             }
         };
-
         fetchProducts();
     }, []);
 
