@@ -80,7 +80,7 @@ const Home = () => {
                 <h4 className="text-uppercase">
                   <strong>Women</strong> Collection
                 </h4>
-                <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold"
+                <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold text-black"
                   to="/products"> Shop Now </Link>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Home = () => {
                       <h4 className="text-uppercase">
                         <strong>Men</strong> Collection
                       </h4>
-                      <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold"
+                      <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold text-black"
                         to="/products" > Shop Now </Link>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ const Home = () => {
                       <h4 className="text-uppercase">
                         <strong>Kids</strong> Collection
                       </h4>
-                      <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold"
+                      <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold text-black"
                         to="/products" > Shop Now </Link>
                     </div>
                   </div>
@@ -129,7 +129,7 @@ const Home = () => {
                       <p className="fs-6 mb-2">
                         Surprise someone with the gift they really want.
                       </p>
-                      <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold"
+                      <Link className="about-btn-link fs-6 default-underline text-uppercase fw-bold text-black"
                         to="/products" > Shop Now </Link>
                     </div>
                   </div>
