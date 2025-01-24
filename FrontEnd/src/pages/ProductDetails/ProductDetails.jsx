@@ -6,6 +6,8 @@ import { useWishlist } from '../../Context/WishlistContext';
 import { useCart } from '../../Context/CartContext';
 import SwiperCarousel2 from "../../Slider/slider-2/SwiperCrousel2";
 import SnackbarNotification from '../../Components/SnackbarNotification/SnackbarNotification';
+import ProductDetailsBanner1 from '../../assets/images/banner/productdetailsbanner-1.webp';
+import ProductDetailsBanner2 from '../../assets/images/banner/productdetailsbanner-2.webp';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -58,8 +60,13 @@ const ProductDetails = () => {
                 }
             }
         };
+
         fetchProductDetails();
     }, [id]);
+
+    if (!product) {
+        return <div className="text-center mt-5">Loading...</div>;
+    }
 
     const getLimitedColorsForProduct = (productId) => {
         const startIndex = Math.abs(productId.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0)) % availableColors.length;
