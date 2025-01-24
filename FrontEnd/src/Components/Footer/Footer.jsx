@@ -66,9 +66,9 @@ const Footer = () => {
                             <h5 className="fw-bold mb-4 text-uppercase">Company</h5>
                             <ul className="list-unstyled">
                                 <li className='my-2'><Link className="text-black fw-light" to="/about">About Us</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/about">Careers</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/about">Affiliates</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/blog_list1">Blog</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="#">Careers</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="#">Affiliates</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="#">Blog</Link></li>
                                 <li className='my-2'><Link className="text-black fw-light" to="/contact">Contact Us</Link></li>
                             </ul>
                         </div>
@@ -77,11 +77,11 @@ const Footer = () => {
                         <div className="footer-column footer-menu col mb-4">
                             <h5 className="fw-bold mb-4 text-uppercase">Shop</h5>
                             <ul className="list-unstyled">
-                                <li className='my-2'><Link className="text-black fw-light" to="/shop-2">New Arrivals</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/shop-3">Accessories</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/shop-4">Men</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/shop-5">Women</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/shop-1">Shop All</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="/products?category=accessories">Accessories</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="/products?category=Shoes">Shoes</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="/products?category=Men">Men</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="/products?category=Women">Women</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="/products">Shop All</Link></li>
                             </ul>
                         </div>
 
@@ -89,12 +89,11 @@ const Footer = () => {
                         <div className="footer-column footer-menu col mb-4">
                             <h5 className="fw-bold mb-4 text-uppercase">Help</h5>
                             <ul className="list-unstyled">
-                                <li className='my-2'><Link className="text-black fw-light" to="/about">Customer Service</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/account_dashboard">My Account</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/store_location">Find a Store</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/terms">Legal & Privacy</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="/account">My Account</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="#">Find a Store</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="#">Legal & Privacy</Link></li>
                                 <li className='my-2'><Link className="text-black fw-light" to="/contact">Contact</Link></li>
-                                <li className='my-2'><Link className="text-black fw-light" to="/about">Gift Card</Link></li>
+                                <li className='my-2'><Link className="text-black fw-light" to="#">Gift Card</Link></li>
                             </ul>
                         </div>
 
