@@ -101,7 +101,7 @@ const AllUser = ({ user }) => {
                                 <th scope="row">{index + 1}</th>
                                 <td>{user.username}</td>
                                 <td>{user.email}</td>
-                                <td>{new Date(user.registrationTime).toLocaleString()}</td>
+                                <td>{new Date(user.registrationTime).toLocaleString('en-GB')}</td>
                                 <td>{user.role}</td>
                                 <td className='position-relative'>
                                     <button
