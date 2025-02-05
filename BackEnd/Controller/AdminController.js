@@ -12,7 +12,7 @@ const Admin = async () => {
 
         if (!adminExists) {
             const adminUser = new User({
-                profilePicture: "https://clostore.onrender.com/assets/images/profiles/1732887779655.jpg",
+                profilePicture: process.env.ADMIN_PROFILE_PICTURE,
                 username: process.env.ADMIN_USERNAME,
                 email: process.env.ADMIN_EMAIL,
                 password: process.env.ADMIN_PASSWORD,
