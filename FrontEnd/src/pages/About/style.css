@@ -31,7 +31,7 @@
 .branded-shop {
     display: inline-block;
     position: relative;
-    color: #000;
+    color: #000 !important;
     font-size: 25px;
 }
 
