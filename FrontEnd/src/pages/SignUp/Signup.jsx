@@ -20,22 +20,26 @@ const Signup = () => {
     address: '',
     profilePicture: null,
   });
+
+  const [selectedFile, setSelectedFile] = useState("Choose Profile");
   const [toastConfig, setToastConfig] = useState(null);
 
-    useEffect(() => {
-      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-      return () => {
-        tooltipList.forEach(tooltip => tooltip.dispose());
-      };
-    }, []);
+  useEffect(() => {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    return () => {
+      tooltipList.forEach(tooltip => tooltip.dispose());
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleFileChange = (e) => {
-    setFormData({ ...formData, profilePicture: e.target.files[0] });
+    const file = e.target.files[0];
+    setSelectedFile(file ? file.name : "Choose Profile");
+    setFormData({ ...formData, profilePicture: file });
   };
 
   const handleSubmit = async (e) => {
@@ -94,11 +98,11 @@ const Signup = () => {
   return (
     <div className='d-flex justify-content-center align-items-center mt-10'>
       <form className="signin-form position-relative" onSubmit={handleSubmit}>
-      <button type="button" class="btn border-0 position-absolute end-0 me-4"
+        <button type="button" className="btn border-0 position-absolute end-0 me-4"
           data-bs-toggle="tooltip" data-bs-placement="top"
           data-bs-custom-class="custom-tooltip"
           data-bs-title="The website server is currently Free version. The Signup/Google Authentication process may take longer than usual. Please be patient or try again if the process does not complete.">
-          <i class="bi bi-info-circle fs-5" style={{color: "#7d645a"}}></i>
+          <i className="bi bi-info-circle fs-5" style={{ color: "#7d645a" }}></i>
         </button>
         <div className="text-center mb-4">
           <img src={logo} alt="Logo" height="80" />
@@ -142,8 +146,9 @@ const Signup = () => {
             <div className="signin-column">
               <label>Profile Picture</label>
             </div>
-            <div className="signin-input-container mb-3">
-              <input type="file" name="profilePicture" accept="image/*" onChange={handleFileChange} required />
+            <div className="signin-input-container mb-3 position-relative">
+              <input type="file" id="profilePicture" name="profilePicture" accept="image/*" onChange={handleFileChange} style={{ display: "none" }} />
+              <label htmlFor="profilePicture" className="text-secondary ms-3 mt-1 border-0">{selectedFile}</label>
             </div>
           </div>
         </div>
@@ -156,7 +161,7 @@ const Signup = () => {
         <p className="signin-or-text">Or</p>
         <div className="signin-row">
           <button onClick={handleGoogleSignIn} className="signin-btn-google">
-            <img src={Google} alt="Logo" height="25" className='me-4' />
+            <img src={Google} alt="Google Logo" height="25" className='me-4' />
             Continue with Google
           </button>
         </div>

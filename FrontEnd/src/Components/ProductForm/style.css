@@ -79,6 +79,7 @@
 }
 
 .custom-file-label {
+    border: transparent !important;
     position: absolute;
     top: 8px;
     right: 120px;

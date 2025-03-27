@@ -35,6 +35,11 @@
 
 .signin-input-container:hover {
     border-color: #7d645a;
+    cursor: pointer;
+}
+
+.signin-input-container label {
+    cursor: pointer;
 }
 
 .signin-input {
