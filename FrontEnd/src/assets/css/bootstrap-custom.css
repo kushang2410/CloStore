@@ -253,3 +253,24 @@
 .btn-close {
     --bs-btn-close-focus-shadow: transparent !important;
 }
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(255, 255, 255, 0.25) !important;
+}
+
+.tooltip-inner {
+    max-width: 374px !important;
+    padding: 1.25rem 0.5rem !important;
+    color: #fff !important;
+    text-align: center !important;
+    background-color: #7d645a !important;
+    border-radius: .25rem !important;
+    font-size: 16px;
+}
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #7d645a !important;
+}

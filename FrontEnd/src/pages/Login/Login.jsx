@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import { IoLockClosedOutline } from "react-icons/io5";
@@ -15,6 +15,14 @@ const Login = () => {
   });
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [toastConfig, setToastConfig] = useState(null);
+
+  useEffect(() => {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    return () => {
+      tooltipList.forEach(tooltip => tooltip.dispose());
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -48,7 +56,13 @@ const Login = () => {
   return (
     <div className='d-flex justify-content-center align-items-center mt-10'>
       {toastConfig && <SnackbarNotification type={toastConfig.type} message={toastConfig.message} onClose={handleCloseSnackbar} />}
-      <form className="login-form" onSubmit={handleSubmit}>
+      <form className="login-form position-relative" onSubmit={handleSubmit}>
+        <button type="button" class="btn border-0 position-absolute end-0 me-4"
+          data-bs-toggle="tooltip" data-bs-placement="top"
+          data-bs-custom-class="custom-tooltip"
+          data-bs-title="The website server is currently Free version. The login process may take longer than usual. Please be patient or try again if the process does not complete.">
+          <i class="bi bi-info-circle fs-5" style={{color: "#7d645a"}}></i>
+        </button>
         <div className="text-center mb-4">
           <img src={logo} alt="Logo" height="80" />
         </div>

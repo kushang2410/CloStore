@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../Context/AuthContext';
 import { IoLockClosedOutline, IoPersonOutline } from "react-icons/io5";
@@ -21,6 +21,14 @@ const Signup = () => {
     profilePicture: null,
   });
   const [toastConfig, setToastConfig] = useState(null);
+
+    useEffect(() => {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+      return () => {
+        tooltipList.forEach(tooltip => tooltip.dispose());
+      };
+    }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -85,7 +93,13 @@ const Signup = () => {
 
   return (
     <div className='d-flex justify-content-center align-items-center mt-10'>
-      <form className="signin-form" onSubmit={handleSubmit}>
+      <form className="signin-form position-relative" onSubmit={handleSubmit}>
+      <button type="button" class="btn border-0 position-absolute end-0 me-4"
+          data-bs-toggle="tooltip" data-bs-placement="top"
+          data-bs-custom-class="custom-tooltip"
+          data-bs-title="The website server is currently Free version. The Signup/Google Authentication process may take longer than usual. Please be patient or try again if the process does not complete.">
+          <i class="bi bi-info-circle fs-5" style={{color: "#7d645a"}}></i>
+        </button>
         <div className="text-center mb-4">
           <img src={logo} alt="Logo" height="80" />
         </div>
