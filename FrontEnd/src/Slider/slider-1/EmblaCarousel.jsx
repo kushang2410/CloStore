@@ -51,7 +51,7 @@ const EmblaCarousel = (props) => {
 
                 <div className="mt-5 d-inline-grid gap-4 d-lg-block justify-content-center">
                   <Link to="/products" className="btn-custom wdt-button mx-2 text-green"> SHOP NOW </Link>
-                  <Link to="/products" className="btn-custom wdt-button-2 mx-2">NEW ARRIVALS</Link>
+                  <Link to="/products" className="btn-custom wdt-button-2 mx-2 text-white">NEW ARRIVALS</Link>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const EmblaCarousel = (props) => {
 
                 <div className="mt-5 d-inline-grid gap-4 d-lg-block justify-content-center">
                   <Link to="/products" className="btn-custom wdt-button mx-2 text-green"> SHOP NOW </Link>
-                  <Link to="/products" className="btn-custom wdt-button-2 mx-2">NEW ARRIVALS</Link>
+                  <Link to="/products" className="btn-custom wdt-button-2 mx-2 text-white">NEW ARRIVALS</Link>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ const EmblaCarousel = (props) => {
 
                 <div className="mt-5 d-inline-grid gap-4 d-lg-block justify-content-center">
                   <Link to="/products" className="btn-custom wdt-button mx-2 text-green"> SHOP NOW </Link>
-                  <Link to="/products" className="btn-custom wdt-button-2 mx-2">NEW ARRIVALS</Link>
+                  <Link to="/products" className="btn-custom wdt-button-2 mx-2 text-white">NEW ARRIVALS</Link>
                 </div>
               </div>
             </div>

@@ -75,7 +75,7 @@ const EmblaCarousel = () => {
                   <a href="/products" className="btn-custom wdt-button mx-2">
                     SHOP NOW
                   </a>
-                  <a href="/products" className="btn-custom wdt-button-2 mx-2">
+                  <a href="/products" className="btn-custom wdt-button-2 mx-2 text-white">
                     NEW ARRIVALS
                   </a>
                 </div>
