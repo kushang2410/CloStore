@@ -161,7 +161,7 @@ const FilterOffCanvas = ({ onFilterSubmit }) => {
                             <ul className="list list-inline row row-cols-2 mb-0">
                                 {categories.map((category, index) => (
                                     <li key={index} className="list-item">
-                                        <Link to="#" className="menu-link mt-2" onClick={() => handleCategorySelect(category)}>
+                                        <Link to="#" className="menu-link mt-2 text-black" onClick={() => handleCategorySelect(category)}>
                                             {category}
                                         </Link>
                                     </li>

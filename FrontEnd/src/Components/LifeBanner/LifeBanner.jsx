@@ -46,7 +46,7 @@ const LifeBanner = () => {
             <div className="position-absolute top-25 start-21 d-grid lh-xxl banner-text">
                 <h2 className="fs-60 w-75">Life From The Comic Book</h2>
                 <span>Retro Games T-Shirts !</span>
-                <Link to="/products" className="btn-custom wdt-button-2 fw-bold w-25 rounded-5 p-0 text-center">SHOP NOW</Link>
+                <Link to="/products" className="btn-custom wdt-button-2 fw-bold w-25 rounded-5 p-0 text-center z-n1">SHOP NOW</Link>
             </div>
 
             <div className="dots-container">
