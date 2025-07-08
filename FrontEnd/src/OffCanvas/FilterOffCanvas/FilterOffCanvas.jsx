@@ -30,7 +30,7 @@ const FilterOffCanvas = ({ onFilterSubmit }) => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('https://clostore.onrender.com/api/products');
+                const response = await axios.get('https://clostore1.onrender.com/api/products');
                 const uniqueCategories = [...new Set(response.data.map(product => product.category))];
                 const brandCounts = response.data.reduce((acc, product) => {
                     acc[product.brand] = (acc[product.brand] || 0) + 1;

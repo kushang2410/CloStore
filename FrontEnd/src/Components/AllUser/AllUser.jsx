@@ -17,7 +17,7 @@ const AllUser = ({ user }) => {
             }
 
             try {
-                const response = await axios.get('https://clostore.onrender.com/api/auth/all-users', {
+                const response = await axios.get('https://clostore1.onrender.com/api/auth/all-users', {
                     headers: {
                         Authorization: `Bearer ${user.token}`,
                     },
@@ -39,7 +39,7 @@ const AllUser = ({ user }) => {
         try {
             let response;
             if (action === 'removeUser') {
-                response = await axios.delete(`https://clostore.onrender.com/api/auth/remove-user`, {
+                response = await axios.delete(`https://clostore1.onrender.com/api/auth/remove-user`, {
                     headers: {
                         Authorization: `Bearer ${user.token}`,
                     },
@@ -47,7 +47,7 @@ const AllUser = ({ user }) => {
                 });
                 setUsers(users.filter(u => u._id !== selectedUserId));
             } else {
-                response = await axios.put(`https://clostore.onrender.com/api/auth/update-user`, {
+                response = await axios.put(`https://clostore1.onrender.com/api/auth/update-user`, {
                     userId: selectedUserId,
                     role: action === 'makeAdmin' ? 'admin' : 'user',
                 }, {

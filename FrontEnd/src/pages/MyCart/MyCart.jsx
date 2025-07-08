@@ -91,7 +91,7 @@ const MyCart = () => {
                                         </thead>
                                         <tbody>
                                             {cart.map((item) => {
-                                                const imageUrl = `https://clostore.onrender.com/${item.image.replace(/\\/g, '/')}`;
+                                                const imageUrl = `https://clostore1.onrender.com/${item.image.replace(/\\/g, '/')}`;
                                                 return (
                                                     <tr key={item._id}>
                                                         <td className='total'>
@@ -141,7 +141,7 @@ const MyCart = () => {
                         <div className="d-md-none">
                             <div className="row g-4">
                                 {cart.map((item) => {
-                                    const imageUrl = `https://clostore.onrender.com/${item.image.replace(/\\/g, '/')}`;
+                                    const imageUrl = `https://clostore1.onrender.com/${item.image.replace(/\\/g, '/')}`;
                                     return (
                                         <div className="col-12" key={item._id}>
                                             <div className="card shadow-sm w-100">

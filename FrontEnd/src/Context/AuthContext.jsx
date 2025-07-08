@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
           setUser({ ...JSON.parse(userDetails), token });
         } else {
           try {
-            const response = await axios.get('https://clostore.onrender.com/api/auth/user', {
+            const response = await axios.get('https://clostore1.onrender.com/api/auth/user', {
               headers: {
                 Authorization: `Bearer ${token}`,
               },
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserDetails = async (token) => {
     try {
-      const response = await axios.get('https://clostore.onrender.com/api/auth/user', {
+      const response = await axios.get('https://clostore1.onrender.com/api/auth/user', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -58,7 +58,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (formData) => {
     try {
-      const response = await axios.post('https://clostore.onrender.com/api/auth/login', formData);
+      const response = await axios.post('https://clostore1.onrender.com/api/auth/login', formData);
       const { token } = response.data;
       localStorage.setItem('token', token);
       await fetchUserDetails(token);
@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
       return true;
     } else {
       try {
-        const response = await axios.post('https://clostore.onrender.com/api/auth/register', formData);
+        const response = await axios.post('https://clostore1.onrender.com/api/auth/register', formData);
         const { token } = response.data;
         localStorage.setItem('token', token);
         await fetchUserDetails(token);

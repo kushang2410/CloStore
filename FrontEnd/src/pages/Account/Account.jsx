@@ -44,7 +44,7 @@ const Account = () => {
         formData.append('profilePicture', file);
 
         try {
-            const response = await axios.post('https://clostore.onrender.com/api/auth/update-profile-picture', formData, {
+            const response = await axios.post('https://clostore1.onrender.com/api/auth/update-profile-picture', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${user.token}`
@@ -90,7 +90,7 @@ const Account = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put('https://clostore.onrender.com/api/auth/update-user', {
+            const response = await axios.put('https://clostore1.onrender.com/api/auth/update-user', {
                 userId: user._id,
                 ...userData,
             }, {
@@ -116,7 +116,7 @@ const Account = () => {
         }
 
         try {
-            const response = await axios.get('https://clostore.onrender.com/api/auth/all-users', {
+            const response = await axios.get('https://clostore1.onrender.com/api/auth/all-users', {
                 headers: {
                     Authorization: `Bearer ${user.token}`,
                 },

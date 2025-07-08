@@ -69,7 +69,7 @@ const CartOffCanvas = ({ show, onHide }) => {
           </div>
         ) : (
           cart.map((item, index) => {
-            const imageUrl = `https://clostore.onrender.com/${item.image.replace(/\\/g, '/')}`;
+            const imageUrl = `https://clostore1.onrender.com/${item.image.replace(/\\/g, '/')}`;
             const subtotal = item.price * item.quantity;
 
             return (

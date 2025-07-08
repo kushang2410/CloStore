@@ -20,12 +20,12 @@ const ProductForm = () => {
     if (id) {
       const fetchProduct = async () => {
         try {
-          const response = await axios.get(`https://clostore.onrender.com/api/products/${id}`);
+          const response = await axios.get(`https://clostore1.onrender.com/api/products/${id}`);
           const product = response.data;
           setValue("name", product.name);
           setValue("rating", product.rating);
           setValue("price", product.price);
-          setImageUrl(`https://clostore.onrender.com/${product.image.replace(/\\/g, '/')}`);
+          setImageUrl(`https://clostore1.onrender.com/${product.image.replace(/\\/g, '/')}`);
         } catch (error) {
           setToast({ type: 'error', message: "Error fetching product." });
         }
@@ -46,7 +46,7 @@ const ProductForm = () => {
 
     try {
       if (id) {
-        await axios.put(`https://clostore.onrender.com/api/products/${id}`, formData, {
+        await axios.put(`https://clostore1.onrender.com/api/products/${id}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             "x-auth-token": user.token,
@@ -54,7 +54,7 @@ const ProductForm = () => {
         });
         setToast({ type: 'success', message: "Product updated successfully!" });
       } else {
-        await axios.post("https://clostore.onrender.com/api/products", formData, {
+        await axios.post("https://clostore1.onrender.com/api/products", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             "x-auth-token": user.token,
