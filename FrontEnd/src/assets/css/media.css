@@ -89,6 +89,19 @@
     .sec {
         min-width: 5.25rem;
     }
+
+    .social-share {
+        left: 14px;
+        overflow: hidden;
+    }
+
+    .trendy-products {
+        left: 14px;
+    }
+
+    .stylish-products {
+        left: 14px;
+    }
 }
 
 @media (min-width: 375px) {
@@ -150,6 +163,7 @@
 
     .social-share {
         left: 14px;
+        overflow: hidden;
     }
 }
 
